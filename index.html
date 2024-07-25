@@ -17,6 +17,11 @@
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            .personal-projects-heading {
+                margin-top: 20px; /* Adjust the value as needed */
+            }
+        </style>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -174,8 +179,9 @@
             <section class="resume-section" id="projects">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Projects</h2>
-                    <!-- EEE4120F-->
+                    <h3 class="mb-0">University Projects</h3>
                     <div class="accordion" id="projectsAccordion">
+                        <!-- EEE4120F-->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="projectOneHeading">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#projectOne" aria-expanded="true" aria-controls="projectOne">
@@ -212,7 +218,7 @@
                             </h2>
                             <div id="projectThree" class="accordion-collapse collapse" aria-labelledby="projectThreeHeading" data-bs-parent="#projectsAccordion">
                                 <div class="accordion-body">
-                                    <p>DESCRIPTION</p>
+                                    <p>Enviro-Sense is a wireless sensor network designed to monitor temperature and humidity at raptor nesting sites. The system uses ESP32-PICO-D4 microcontrollers, Raspberry PI Zero's, and DHT11 sensors to collect and transmit data efficiently. It focuses on cost-effective and reliable environmental monitoring, with real-time data transmission and power-efficient strategies.</p>
                                     <a href="projects/enviro_sense.html" target="_self">View Details</a>
                                 </div>
                             </div>
@@ -226,7 +232,7 @@
                             </h2>
                             <div id="projectFour" class="accordion-collapse collapse" aria-labelledby="projectFourHeading" data-bs-parent="#projectsAccordion">
                                 <div class="accordion-body">
-                                    <p>DESCRIPTION</p>
+                                    <p>This project implemented data compression and encryption on the STM32F051 Discovery Board to securely transmit sensor data from Antarctic buoys via the Iridium satellite network. The system uses LZSS for compression and Blowfish for encryption, ensuring data integrity and reducing transmission costs.</p>
                                     <a href="projects/stm_data_sharc.html" target="_self">View Details</a>
                                 </div>
                             </div>
@@ -235,13 +241,31 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="projectFiveHeading">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#projectFive" aria-expanded="false" aria-controls="projectFive">
-                                    Group Investment Project: Portfolio Optimization and Risk Management
+                                    Investment Project: Portfolio Optimization and Risk Management
                                 </button>
                             </h2>
                             <div id="projectFive" class="accordion-collapse collapse" aria-labelledby="projectFiveHeading" data-bs-parent="#projectsAccordion">
                                 <div class="accordion-body">
-                                    <p>DESCRIPTION</p>
+                                    <p>This project involved a simulated investment journey on the Johannesburg Securities Exchange (JSE), where strategic investment decisions were made to maximize returns and manage risks. The project included comprehensive financial analysis and resulted in a total profit of R1,037.24.</p>
                                     <a href="projects/gip.html" target="_self">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="mb-0 personal-projects-heading">Personal Projects</h3>
+                    <div class="accordion" id="pprojectsAccordio2">
+                        <!-- -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="pprojectOneHeading">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#pprojectOne" aria-expanded="true" aria-controls="pprojectOne">
+                                    TITLE
+                                </button>
+                            </h2>
+                            <div id="pprojectOne" class="accordion-collapse collapse show" aria-labelledby="pprojectOneHeading" data-bs-parent="#pprojectsAccordion">
+                                <div class="accordion-body">
+                                    <p>DESCRIPTION</p>
+                                    <a href="projects/template_project.html" target="_self">View Details</a>
                                 </div>
                             </div>
                         </div>

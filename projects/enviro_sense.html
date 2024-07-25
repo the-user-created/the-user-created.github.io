@@ -34,35 +34,39 @@
         </nav>
         <div class="container mt-5">
             <header class="mb-5">
-                <h2>Project Title</h2>
+                <h2>Enviro-Sense: Environmental Monitoring System for Raptor Nesting Sites</h2>
             </header>
             <main>
                 <section class="project-details">
                     <h2>Overview</h2>
-                    <p>Brief overview of the project.</p>
+                    <p>The Enviro-Sense project focuses on designing and implementing a wireless sensor network (WSN) to monitor environmental conditions at raptor nesting sites in the wild. The system aims to gather accurate data on temperature and humidity, aiding in the conservation and study of these birds.</p>
 
                     <h2>Objectives</h2>
                     <ul>
-                        <li>Objective 1</li>
-                        <li>Objective 2</li>
-                        <li>Objective 3</li>
+                        <li>Develop a cost-effective and reliable environmental monitoring system.</li>
+                        <li>Ensure seamless wireless data transmission from remote sensor nodes.</li>
+                        <li>Implement power-efficient strategies to maximize battery life.</li>
                     </ul>
 
                     <h2>Technologies Used</h2>
                     <ul>
-                        <li>Technology 1</li>
-                        <li>Technology 2</li>
-                        <li>Technology 3</li>
+                        <li>ESP32-PICO-D4 Microcontroller</li>
+                        <li>DHT11 Temperature and Humidity Sensor</li>
+                        <li>DS3231 Real-Time Clock (RTC) Module</li>
+                        <li>Raspberry Pi Zero</li>
+                        <li>Arduino IDE</li>
                     </ul>
 
                     <h2>Details</h2>
-                    <p>Detailed description of the project, including methodologies, tools, and outcomes.</p>
+                    <p>The project utilized the ESP32-PICO-D4 microcontroller for its compact size and built-in Wi-Fi capabilities, allowing for seamless data transmission. The DHT11 sensor was chosen for its affordability and sufficient accuracy for temperature and humidity measurements. The DS3231 RTC ensured accurate timestamping of data. Firmware was developed in Arduino IDE to manage data acquisition, validation, and low-power modes, optimizing battery life. The prototype was designed to collect data every second and transmit it wirelessly to a rendezvous node, where it could be further processed and analyzed.</p>
+                    <p><!-- Add Picture of Prototype Design --></p>
 
                     <h2>Challenges</h2>
-                    <p>Explanation of challenges faced and how they were overcome.</p>
+                    <p>One of the main challenges was selecting components that balanced cost with performance. The ESP32-PICO-D4 and DHT11 sensor met the project's budget constraints while still providing reliable data. Another challenge was ensuring data accuracy and integrity, which was addressed through data validation techniques like range checking. Power management was critical, achieved through the microcontroller's low-power sleep mode and the RTC's wake-up triggers.</p>
 
                     <h2>Results</h2>
-                    <p>Summary of results, including any data or metrics.</p>
+                    <p>The prototype successfully gathered and transmitted accurate temperature and humidity data from sensor nodes to a rendezvous node. The system proved to be cost-effective, with a stable wireless connection and efficient power management, capable of real-time monitoring and data collection. Testing confirmed the system's ability to meet the specified requirements, providing a solid foundation for future development and deployment.</p>
+                    <p><!-- Add Picture of Testing Setup --></p>
                 </section>
             </main>
         </div>

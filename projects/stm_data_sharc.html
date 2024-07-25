@@ -34,35 +34,52 @@
         </nav>
         <div class="container mt-5">
             <header class="mb-5">
-                <h2>Project Title</h2>
+                <h2>Encryption and Compression Algorithms on Resource-Constrained Embedded ARM Microcontrollers</h2>
             </header>
             <main>
                 <section class="project-details">
                     <h2>Overview</h2>
-                    <p>Brief overview of the project.</p>
+                    <p>
+                        This project focuses on implementing data compression and encryption on the STM32F051 Discovery Board for secure and efficient data transmission from sensors in Antarctic buoys. The primary goal is to reduce transmission costs and ensure data security over the Iridium satellite network.
+                    </p>
 
                     <h2>Objectives</h2>
                     <ul>
-                        <li>Objective 1</li>
-                        <li>Objective 2</li>
-                        <li>Objective 3</li>
+                        <li>Design and implement efficient data compression and encryption algorithms on the STM32F051 Discovery Board.</li>
+                        <li>Ensure data integrity and security during transmission over the Iridium satellite network.</li>
+                        <li>Validate system performance using simulated and real sensor data.</li>
                     </ul>
 
                     <h2>Technologies Used</h2>
                     <ul>
-                        <li>Technology 1</li>
-                        <li>Technology 2</li>
-                        <li>Technology 3</li>
+                        <li>STM32F051 Discovery Board</li>
+                        <li>ICM-20948 MEMS Motion Tracking Unit</li>
+                        <li>Python for initial algorithm testing</li>
+                        <li>C programming for implementation on STM32</li>
                     </ul>
 
                     <h2>Details</h2>
-                    <p>Detailed description of the project, including methodologies, tools, and outcomes.</p>
+                    <p>
+                        The project involves designing subsystems for data retrieval, compression, encryption, and transmission. The data collected from the IMU (Inertial Measurement Unit) is first processed to extract Fourier coefficients. The LZSS algorithm is used for data compression, and the Blowfish algorithm is employed for encryption. The system ensures that at least 25% of the lower Fourier coefficients are preserved, meeting the client's requirements. A CRC-32 checksum is used to verify data integrity before and after transmission.
+                    </p>
 
                     <h2>Challenges</h2>
-                    <p>Explanation of challenges faced and how they were overcome.</p>
+                    <p>
+                        One major challenge was the limited memory and computational power of the STM32F051 Discovery Board, which restricted the choice of algorithms. Implementing the algorithms in C, rather than Python, presented difficulties due to differences in processor architecture. Another challenge was ensuring that the compression and encryption processes were efficient enough to meet the specified time constraints.
+                    </p>
 
                     <h2>Results</h2>
-                    <p>Summary of results, including any data or metrics.</p>
+                    <p>
+                        The project successfully implemented data compression and encryption on the STM32F051 Discovery Board, meeting most of the specified acceptance test procedures. The system achieved an average compression ratio of 1.812 and encryption speed of 910.219 bytes/second. However, the compression and encryption times slightly exceeded the initial specified limits, leading to revised specifications.
+                    </p>
+
+                    <!-- Add picture placeholders for better visual representation -->
+                    <div class="picture-placeholder">
+                        <p>Figure 1: System Operation Diagram</p>
+                    </div>
+                    <div class="picture-placeholder">
+                        <p>Figure 2: Compression and Encryption Speed Graphs</p>
+                    </div>
                 </section>
             </main>
         </div>
