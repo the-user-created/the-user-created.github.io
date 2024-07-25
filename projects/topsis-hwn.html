@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Project Details</title>
+        <link rel="icon" type="image/png" href="../assets/img/favicon.ico">
+        <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css">
+        <link href="../css/styles.css" rel="stylesheet">
+        <!-- Bootstrap core CSS-->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="../index.html#page-top">
+                <span class="d-block d-lg-none">David Samuel Young</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="../assets/img/profile.jpg" alt="IMG MISSING" /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#interests">Interests</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#awards">Awards</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container mt-5">
+            <header class="mb-5">
+                <h2>TOPSIS-based RAT Selection Algorithm for Heterogeneous Wireless Networks</h2>
+            </header>
+            <main>
+                <section class="project-details">
+                    <h2>Overview</h2>
+                    <p>This project focuses on developing a TOPSIS-based algorithm for selecting the optimal Radio Access Technology (RAT) in Heterogeneous Wireless Networks (HWNs). The algorithm considers multiple criteria such as signal strength, data rate, and delay to ensure the best possible network performance and user experience.</p>
+
+                    <h2>Objectives</h2>
+                    <ul>
+                        <li>Analyze the complexities of RAT selection in HWNs.</li>
+                        <li>Develop a multi-criteria decision-making algorithm using TOPSIS.</li>
+                        <li>Evaluate the impact of different criteria weights on RAT selection decisions.</li>
+                    </ul>
+
+                    <h2>Technologies Used</h2>
+                    <ul>
+                        <li>TOPSIS Algorithm</li>
+                        <li>Python for Data Analysis</li>
+                        <li>Network Simulation Tools</li>
+                    </ul>
+
+                    <h2>Details</h2>
+                    <p>The project begins with a literature review comparing horizontal and vertical handovers in HWNs and examining multi-criteria decision-making techniques for RAT selection. The system description includes details on available RATs (LTE, Wi-Fi 6, 5G NR) and the criteria (signal strength, data rate, delay) used for selection. The TOPSIS algorithm was applied to normalize the decision matrix, calculate weighted scores, and determine the ideal and negative ideal solutions. The evaluation involved extensive testing with varying weights for each criterion to understand their impact on RAT selection.</p>
+
+                    <h2>Challenges</h2>
+                    <p>The primary challenge was ensuring the algorithm's accuracy and efficiency in real-time scenarios. Balancing the criteria to reflect realistic user preferences and network conditions required meticulous testing and refinement. Additionally, data limitations from network simulations posed challenges in validating the algorithm's performance across different environments.</p>
+
+                    <h2>Results</h2>
+                    <p>The TOPSIS-based algorithm demonstrated its capability to effectively select the optimal RAT in HWNs. The results showed a strong preference for Wi-Fi 6 due to its balanced performance across all criteria. 5G NR was preferred in scenarios with higher data rate requirements. No users selected LTE, indicating its lower competitiveness under the tested conditions. The project highlights the significance of user-defined weights in shaping RAT selection decisions and validates the use of TOPSIS for multi-criteria network optimization.</p>
+                </section>
+            </main>
+        </div>
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- FontAwesome JS -->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Core theme JS-->
+        <script src="../js/scripts.js"></script>
+    </body>
+</html>

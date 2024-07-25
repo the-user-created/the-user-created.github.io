@@ -6,6 +6,7 @@
         <meta name="description" content="David Samuel Young's ePortfolio" />
         <meta name="author" content="David Samuel Young" />
         <title>Hi! I'm David</title>
+        <!-- Favicon TODO: favicon not showing in production site-->
         <link rel="icon" type="image/png" href="assets/img/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -30,12 +31,14 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
                 </ul>
             </div>
         </nav>
+
         <!-- Page Content-->
         <div class="container-fluid p-0">
             <!-- About-->
@@ -163,6 +166,85 @@
                             <div>Final aggregate: 81%</div>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">2016 - 2018</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Projects-->
+            <section class="resume-section" id="projects">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Projects</h2>
+                    <!-- EEE4120F-->
+                    <div class="accordion" id="projectsAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="projectOneHeading">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#projectOne" aria-expanded="true" aria-controls="projectOne">
+                                    Comparative Analysis and Optimization of MD5 and MD6 Hashing Algorithm Implementations
+                                </button>
+                            </h2>
+                            <div id="projectOne" class="accordion-collapse collapse show" aria-labelledby="projectOneHeading" data-bs-parent="#projectsAccordion">
+                                <div class="accordion-body">
+                                                <p>This project evaluates the performance of MD5 and MD6 hashing algorithms across C++, OpenCL, and Verilog implementations, highlighting the trade-offs between software and hardware approaches and demonstrating the advantages of parallel processing for cryptographic applications.</p>
+                                    <a href="projects/yoda.html" target="_self">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- EEE4121F-->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="projectTwoHeading">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#projectTwo" aria-expanded="false" aria-controls="projectTwo">
+                                    TOPSIS-based RAT Selection Algorithm for Heterogeneous Wireless Networkss
+                                </button>
+                            </h2>
+                            <div id="projectTwo" class="accordion-collapse collapse" aria-labelledby="projectTwoHeading" data-bs-parent="#projectsAccordion">
+                                <div class="accordion-body">
+                                    <p>This project focuses on developing a TOPSIS-based algorithm for selecting the optimal Radio Access Technology (RAT) in Heterogeneous Wireless Networks (HWNs), considering criteria such as signal strength, data rate, and delay to enhance network performance and user experience.</p>
+                                    <a href="projects/topsis-hwn.html" target="_self">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- EEE4113F-->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="projectThreeHeading">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#projectThree" aria-expanded="false" aria-controls="projectThree">
+                                    Enviro-Sense: Environmental Monitoring System for Raptor Nesting Sites
+                                </button>
+                            </h2>
+                            <div id="projectThree" class="accordion-collapse collapse" aria-labelledby="projectThreeHeading" data-bs-parent="#projectsAccordion">
+                                <div class="accordion-body">
+                                    <p>DESCRIPTION</p>
+                                    <a href="projects/enviro=sense.html" target="_self">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- EEE3097S-->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="projectFourHeading">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#projectFour" aria-expanded="false" aria-controls="projectFour">
+                                    Encryption and Compression Algorithms on Resource-Constrained Embedded ARM Microcontrollers
+                                </button>
+                            </h2>
+                            <div id="projectFour" class="accordion-collapse collapse" aria-labelledby="projectFourHeading" data-bs-parent="#projectsAccordion">
+                                <div class="accordion-body">
+                                    <p>DESCRIPTION</p>
+                                    <a href="projects/stm_data_sharc.html" target="_self">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FTX1005S-->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="projectFiveHeading">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#projectFive" aria-expanded="false" aria-controls="projectFive">
+                                    Group Investment Project: Portfolio Optimization and Risk Management
+                                </button>
+                            </h2>
+                            <div id="projectFive" class="accordion-collapse collapse" aria-labelledby="projectFiveHeading" data-bs-parent="#projectsAccordion">
+                                <div class="accordion-body">
+                                    <p>DESCRIPTION</p>
+                                    <a href="projects/gip.html" target="_self">View Details</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

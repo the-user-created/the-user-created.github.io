@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Project Details</title>
+        <link rel="icon" type="image/png" href="../assets/img/favicon.ico">
+        <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css">
+        <link href="../css/styles.css" rel="stylesheet">
+        <!-- Bootstrap core CSS-->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="../index.html#page-top">
+                <span class="d-block d-lg-none">David Samuel Young</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="../assets/img/profile.jpg" alt="IMG MISSING" /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#interests">Interests</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#awards">Awards</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container mt-5">
+            <header class="mb-5">
+                <h2>Comparative Analysis and Optimization of MD5 and MD6 Hashing Algorithm Implementations in C++, OpenCL, and Verilog</h2>
+            </header>
+            <main>
+                <section class="project-details">
+                    <h2>Overview</h2>
+                    <p>This project explores the performance and efficiency of MD5 and MD6 hashing algorithm implementations across different programming languages: C++, OpenCL, and Verilog. The focus is on evaluating execution time and comparing performance to identify the best implementation strategy.</p>
+
+                    <h2>Objectives</h2>
+                    <ul>
+                        <li>Implement MD5 and MD6 hashing algorithms in C++, OpenCL, and Verilog.</li>
+                        <li>Evaluate execution time and throughput across implementations.</li>
+                        <li>Analyze the trade-offs between software and hardware implementations.</li>
+                    </ul>
+
+                    <h2>Technologies Used</h2>
+                    <ul>
+                        <li>C++</li>
+                        <li>OpenCL</li>
+                        <li>Verilog</li>
+                        <li>Xilinx Vivado Design Suite</li>
+                        <li>JetBrains CLion 2024 IDE</li>
+                    </ul>
+
+                    <h2>Details</h2>
+                    <p>
+                        The project involves implementing the MD5 and MD6 hashing algorithms in different environments to compare their performance. The MD5 algorithm, being inherently sequential, presents challenges for parallelization. However, the MD6 algorithm, designed with parallelization in mind, is evaluated for its efficiency on multi-core processors and parallel computing platforms.
+                    </p>
+                    <p>
+                        The implementations include a sequential MD5 in C++, an OpenCL MD5 to test parallel capabilities, and a Verilog MD5 for hardware acceleration. The MD6 algorithm is implemented sequentially and in parallel using C++ to demonstrate the benefits of parallel processing.
+                    </p>
+
+                    <h2>Challenges</h2>
+                    <p>
+                        One of the primary challenges faced was the sequential nature of the MD5 algorithm, which limited its potential for parallelization. Implementing MD5 in OpenCL highlighted performance bottlenecks, particularly in kernel execution and data transfer. Additionally, the Verilog implementation was constrained by the maximum input size it could handle, limiting its practical applicability.
+                    </p>
+                    <p>
+                        **Insert Image of Performance Graphs**
+                    </p>
+
+                    <h2>Results</h2>
+                    <p>
+                        The project successfully demonstrated the performance differences across various implementations. The parallelized C++ MD6 implementation achieved significant speedup, making it the most efficient for handling large data volumes. The Verilog MD5 implementation, though extremely fast for small inputs, was limited by its maximum input size constraint. The OpenCL MD5 implementation faced performance issues, highlighting the need for further optimization.
+                    </p>
+                </section>
+            </main>
+        </div>
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- FontAwesome JS -->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Core theme JS-->
+        <script src="../js/scripts.js"></script>
+    </body>
+</html>
