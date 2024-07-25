@@ -10940,9 +10940,33 @@ p.lead {
   background-color: #bd5d38;
 }
 
-.dev-icons {
-  font-size: 3rem;
+.skills-group {
+    margin-bottom: 20px;
 }
+
+.skills-group h4 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.list-inline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.cbp-ig-icon {
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+.dev-icons {
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
 
 section.resume-section {
   display: flex;
