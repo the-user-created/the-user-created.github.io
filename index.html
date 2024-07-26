@@ -53,7 +53,7 @@
                         David
                         <span class="text-primary">Young</span>
                     </h1>
-                    <div class="subheading mb-5">
+                    <div class="fw-semibold mb-5">
                         Cape Town, South Africa ·
                         <a href="mailto:davidsamuelyoung@protonmail.com">davidsamuelyoung@protonmail.com</a>
                     </div>
@@ -73,7 +73,7 @@
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Intern Developer</h3>
-                            <div class="subheading mb-3">Arixian</div>
+                            <div class="fw-semibold mb-3">Arixian</div>
                             <p>Arixian develops AI-driven security solutions that detect and deter intruders in real-time.</p>
                             <p>During my internship at Arixian, I was involved in developing a microservice for secure video streaming. My responsibilities included:</p>
                             <ul>
@@ -91,7 +91,7 @@
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">iOS App Developer</h3>
-                            <div class="subheading mb-3">Oobalink</div>
+                            <div class="fw-semibold mb-3">Oobalink</div>
                             <p>Oobalink is a subsidiary of Ooba, a home loan originator in South Africa, consisting of a group of Ooba franchisees (self-employed business owners operating under the contract of Ooba).</p>
                             <p>During my time with Oobalink, I was responsible for developing a fully interactive iOS app prototype for streamlining the process of capturing a client's home loan application details. This prototype was designed to simulate all user interactions and workflows as they would occur in a final, production-ready application, but without a backend server. My responsibilities included:</p>
                             <ul>
@@ -110,7 +110,7 @@
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Sales Manager</h3>
-                            <div class="subheading mb-3">Funky Chickens</div>
+                            <div class="fw-semibold mb-3">Funky Chickens</div>
                             <p>Funky Chickens sold free range organic meat online and at markets. My responsibilities included:</p>
                             <ul>
                                 <li>Invoicing.</li>
@@ -135,7 +135,7 @@
                                 <img src="assets/img/uct_logo.gif" alt="UCT Logo" style="height: 120px; margin-right: 10px;">
                                 University of Cape Town
                             </h3>
-                            <div class="subheading mb-3">BSc(Eng) Electrical and Computer Engineering</div>
+                            <div class="fw-semibold mb-3">BSc(Eng) Electrical and Computer Engineering</div>
                             <div>Cumultative GPA: 65.86%</div>
                             <div class="mt-3">
                                 <strong>Notable Results:</strong>
@@ -156,7 +156,7 @@
                                 <img src="assets/img/cambridge-logo.png" alt="Cambridge Logo" style="height: 120px; margin-right: 10px;">
                                 Cambridge AS Level, Homeschool
                             </h3>
-                            <div class="subheading mb-3">Subjects: Chemistry, Mathematics, Physics, Computer Science</div>
+                            <div class="fw-semibold mb-3">Subjects: Chemistry, Mathematics, Physics, Computer Science</div>
                             <div>Final aggregate: 82%</div>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">2018 - 2020</span></div>
@@ -167,7 +167,7 @@
                                 <img src="assets/img/cambridge-logo.png" alt="Cambridge Logo" style="height: 120px; margin-right: 10px;">
                                 Cambridge IGCSE Level, Homeschool
                             </h3>
-                            <div class="subheading mb-3">Subjects: English (1st Language), Chemistry, Computer Science, Mathematics, Physics</div>
+                            <div class="fw-semibold mb-3">Subjects: English (1st Language), Chemistry, Computer Science, Mathematics, Physics</div>
                             <div>Final aggregate: 81%</div>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">2016 - 2018</span></div>
@@ -175,20 +175,34 @@
                 </div>
             </section>
             <hr class="m-0" />
-            <!-- Projects-->
+            <!-- Projects TODO: Add  images, and personal projects-->
             <section class="resume-section" id="projects">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Projects</h2>
                     <h3 class="mb-0">University Projects</h3>
                     <div class="accordion" id="projectsAccordion">
-                        <!-- EEE4120F-->
+                        <!-- EEE3097S-->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="projectOneHeading">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#projectOne" aria-expanded="true" aria-controls="projectOne">
-                                    Comparative Analysis and Optimization of MD5 and MD6 Hashing Algorithm Implementations
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#projectOne" aria-expanded="false" aria-controls="projectOne">
+                                    Encryption and Compression Algorithms on Resource-Constrained Embedded ARM Microcontrollers
                                 </button>
                             </h2>
                             <div id="projectOne" class="accordion-collapse collapse show" aria-labelledby="projectOneHeading" data-bs-parent="#projectsAccordion">
+                                <div class="accordion-body">
+                                    <p>This project implemented data compression and encryption on the STM32F051 Discovery Board to securely transmit sensor data from Antarctic buoys via the Iridium satellite network. The system uses LZSS for compression and Blowfish for encryption, ensuring data integrity and reducing transmission costs.</p>
+                                    <a href="projects/stm_data_sharc.html" target="_self">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- EEE4120F-->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="projectTwoHeading">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#projectTwo" aria-expanded="true" aria-controls="projectTwo">
+                                    Comparative Analysis and Optimization of MD5 and MD6 Hashing Algorithm Implementations
+                                </button>
+                            </h2>
+                            <div id="projectTwo" class="accordion-collapse collapse" aria-labelledby="projectTwoHeading" data-bs-parent="#projectsAccordion">
                                 <div class="accordion-body">
                                                 <p>This project evaluates the performance of MD5 and MD6 hashing algorithms across C++, OpenCL, and Verilog implementations, highlighting the trade-offs between software and hardware approaches and demonstrating the advantages of parallel processing for cryptographic applications.</p>
                                     <a href="projects/yoda.html" target="_self">View Details</a>
@@ -197,12 +211,12 @@
                         </div>
                         <!-- EEE4121F-->
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="projectTwoHeading">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#projectTwo" aria-expanded="false" aria-controls="projectTwo">
+                            <h2 class="accordion-header" id="projectThreeHeading">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#projectThree" aria-expanded="false" aria-controls="projectThree">
                                     TOPSIS-based RAT Selection Algorithm for Heterogeneous Wireless Networkss
                                 </button>
                             </h2>
-                            <div id="projectTwo" class="accordion-collapse collapse" aria-labelledby="projectTwoHeading" data-bs-parent="#projectsAccordion">
+                            <div id="projectThree" class="accordion-collapse collapse" aria-labelledby="projectThreeHeading" data-bs-parent="#projectsAccordion">
                                 <div class="accordion-body">
                                     <p>This project focuses on developing a TOPSIS-based algorithm for selecting the optimal Radio Access Technology (RAT) in Heterogeneous Wireless Networks (HWNs), considering criteria such as signal strength, data rate, and delay to enhance network performance and user experience.</p>
                                     <a href="projects/topsis_hwn.html" target="_self">View Details</a>
@@ -211,29 +225,15 @@
                         </div>
                         <!-- EEE4113F-->
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="projectThreeHeading">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#projectThree" aria-expanded="false" aria-controls="projectThree">
-                                    Enviro-Sense: Environmental Monitoring System for Raptor Nesting Sites
-                                </button>
-                            </h2>
-                            <div id="projectThree" class="accordion-collapse collapse" aria-labelledby="projectThreeHeading" data-bs-parent="#projectsAccordion">
-                                <div class="accordion-body">
-                                    <p>Enviro-Sense is a wireless sensor network designed to monitor temperature and humidity at raptor nesting sites. The system uses ESP32-PICO-D4 microcontrollers, Raspberry PI Zero's, and DHT11 sensors to collect and transmit data efficiently. It focuses on cost-effective and reliable environmental monitoring, with real-time data transmission and power-efficient strategies.</p>
-                                    <a href="projects/enviro_sense.html" target="_self">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- EEE3097S-->
-                        <div class="accordion-item">
                             <h2 class="accordion-header" id="projectFourHeading">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#projectFour" aria-expanded="false" aria-controls="projectFour">
-                                    Encryption and Compression Algorithms on Resource-Constrained Embedded ARM Microcontrollers
+                                    Enviro-Sense: Environmental Monitoring System for Raptor Nesting Sites
                                 </button>
                             </h2>
                             <div id="projectFour" class="accordion-collapse collapse" aria-labelledby="projectFourHeading" data-bs-parent="#projectsAccordion">
                                 <div class="accordion-body">
-                                    <p>This project implemented data compression and encryption on the STM32F051 Discovery Board to securely transmit sensor data from Antarctic buoys via the Iridium satellite network. The system uses LZSS for compression and Blowfish for encryption, ensuring data integrity and reducing transmission costs.</p>
-                                    <a href="projects/stm_data_sharc.html" target="_self">View Details</a>
+                                    <p>Enviro-Sense is a wireless sensor network designed to monitor temperature and humidity at raptor nesting sites. The system uses ESP32-PICO-D4 microcontrollers, Raspberry PI Zero's, and DHT11 sensors to collect and transmit data efficiently. It focuses on cost-effective and reliable environmental monitoring, with real-time data transmission and power-efficient strategies.</p>
+                                    <a href="projects/enviro_sense.html" target="_self">View Details</a>
                                 </div>
                             </div>
                         </div>
@@ -254,7 +254,7 @@
                     </div>
 
                     <h3 class="mb-0 personal-projects-heading">Personal Projects</h3>
-                    <div class="accordion" id="pprojectsAccordio2">
+                    <div class="accordion" id="pprojectsAccordion">
                         <!-- -->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="pprojectOneHeading">
@@ -278,7 +278,7 @@
                 <div class="resume-section-content">
                     <h2 class="mb-5">Skills</h2>
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <div class="skills-group">
                                 <h4>Programming Languages</h4>
                                 <ul class="list-inline dev-icons">
@@ -304,17 +304,8 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="skills-group">
-                                <h4>Other Skills</h4>
-                                <ul class="list-inline">
-                                    <li class="list-inline-item">Project Management</li>
-                                    <li class="list-inline-item">Professional Communication</li>
-                                    <li class="list-inline-item">Embedded Systems</li>
-                                    <li class="list-inline-item">Communication Networks</li>
-                                </ul>
-                            </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <div class="skills-group">
                                 <h4>Tools & Technologies</h4>
                                 <ul class="list-inline dev-icons">
@@ -336,8 +327,19 @@
                                     </li>
                                     <li class="list-inline-item">
                                         <i class="cbp-ig-icon devicon-kubernetes-plain"></i>
-                                        Kubernetes (Intermediate)
+                                        Kubernetes (Beginner)
                                     </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="skills-group">
+                                <h4>General Skills</h4>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">Project Management</li>
+                                    <li class="list-inline-item">Professional Communication</li>
+                                    <li class="list-inline-item">Embedded Systems</li>
+                                    <li class="list-inline-item">Communication Networks</li>
                                 </ul>
                             </div>
                         </div>
