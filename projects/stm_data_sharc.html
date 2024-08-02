@@ -63,6 +63,11 @@
                         The project involves designing subsystems for data retrieval, compression, encryption, and transmission. The data collected from the IMU (Inertial Measurement Unit) is first processed to extract Fourier coefficients. The LZSS algorithm is used for data compression, and the Blowfish algorithm is employed for encryption. The system ensures that at least 25% of the lower Fourier coefficients are preserved, meeting the client's requirements. A CRC-32 checksum is used to verify data integrity before and after transmission.
                     </p>
 
+                    <div class="picture-placeholder">
+                        <img src="../assets/img/sys_op_diag.png" alt="System Operation Diagram">
+                        <p>Figure 1: System Operation Diagram</p>
+                    </div>
+
                     <h2>Challenges</h2>
                     <p>
                         One major challenge was the limited memory and computational power of the STM32F051 Discovery Board, which restricted the choice of algorithms. Implementing the algorithms in C, rather than Python, presented difficulties due to differences in processor architecture. Another challenge was ensuring that the compression and encryption processes were efficient enough to meet the specified time constraints.
@@ -73,12 +78,15 @@
                         The project successfully implemented data compression and encryption on the STM32F051 Discovery Board, meeting most of the specified acceptance test procedures. The system achieved an average compression ratio of 1.812 and encryption speed of 910.219 bytes/second. However, the compression and encryption times slightly exceeded the initial specified limits, leading to revised specifications.
                     </p>
 
-                    <!-- Add picture placeholders for better visual representation -->
-                    <div class="picture-placeholder">
-                        <p>Figure 1: System Operation Diagram</p>
-                    </div>
-                    <div class="picture-placeholder">
-                        <p>Figure 2: Compression and Encryption Speed Graphs</p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="../assets/img/compress-speed.png" alt="Compression Speed Graph" class="img-fluid">
+                            <p>Figure 2a: Compression Speed Graph</p>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="../assets/img/encrypt-speed.png" alt="Encryption Speed Graph" class="img-fluid">
+                            <p>Figure 2b: Encryption Speed Graph</p>
+                        </div>
                     </div>
 
                     <h2>Download Full Report</h2>

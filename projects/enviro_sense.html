@@ -59,17 +59,19 @@
 
                     <h2>Details</h2>
                     <p>The project utilized the ESP32-PICO-D4 microcontroller for its compact size and built-in Wi-Fi capabilities, allowing for seamless data transmission. The DHT11 sensor was chosen for its affordability and sufficient accuracy for temperature and humidity measurements. The DS3231 RTC ensured accurate timestamping of data. Firmware was developed in Arduino IDE to manage data acquisition, validation, and low-power modes, optimizing battery life. The prototype was designed to collect data every second and transmit it wirelessly to a rendezvous node, where it could be further processed and analyzed.</p>
-                    <p><!-- Add Picture of Prototype Design --></p>
+                    <div class="picture-placeholder">
+                        <img src="../assets/img/CommSystem.png" alt="Communication Design">
+                        <p>Figure 1: Prototype Communication and User Interface Design</p>
+                    </div>
 
                     <h2>Challenges</h2>
                     <p>One of the main challenges was selecting components that balanced cost with performance. The ESP32-PICO-D4 and DHT11 sensor met the project's budget constraints while still providing reliable data. Another challenge was ensuring data accuracy and integrity, which was addressed through data validation techniques like range checking. Power management was critical, achieved through the microcontroller's low-power sleep mode and the RTC's wake-up triggers.</p>
 
                     <h2>Results</h2>
                     <p>The prototype successfully gathered and transmitted accurate temperature and humidity data from sensor nodes to a rendezvous node. The system proved to be cost-effective, with a stable wireless connection and efficient power management, capable of real-time monitoring and data collection. Testing confirmed the system's ability to meet the specified requirements, providing a solid foundation for future development and deployment.</p>
-                    <p><!-- Add Picture of Testing Setup --></p>
 
                     <h2>Download Full Report</h2>
-                    <p>You can download the full project report here: <a href="../assets/pdf/enviro-sense.pdf" target="_blank">Enviro-Sense Report</a>.</p>
+                    <p>You can download the full project report here: <a href="../assets/pdf/enviro-sense.pdf" target="_blank">Enviro-Sense: Environmental Monitoring System for Raptor Nesting Sites</a>.</p>
                 </section>
             </main>
         </div>

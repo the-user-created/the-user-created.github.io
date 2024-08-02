@@ -69,14 +69,21 @@
                     <p>
                         One of the primary challenges faced was the sequential nature of the MD5 algorithm, which limited its potential for parallelization. Implementing MD5 in OpenCL highlighted performance bottlenecks, particularly in kernel execution and data transfer. Additionally, the Verilog implementation was constrained by the maximum input size it could handle, limiting its practical applicability.
                     </p>
-                    <p>
-                        **Insert Image of Performance Graphs**
-                    </p>
 
                     <h2>Results</h2>
                     <p>
                         The project successfully demonstrated the performance differences across various implementations. The parallelized C++ MD6 implementation achieved significant speedup, making it the most efficient for handling large data volumes. The Verilog MD5 implementation, though extremely fast for small inputs, was limited by its maximum input size constraint. The OpenCL MD5 implementation faced performance issues, highlighting the need for further optimization.
                     </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="../assets/img/comparison_execution_time.png" alt="Execution Time Graph" class="img-fluid">
+                            <p>Figure 2a: Comparison of Execution Time Across Implementations</p>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="../assets/img/comparison_throughput.png" alt="Throughput Graph" class="img-fluid">
+                            <p>Figure 2b: Comparison of Throughput Across Implementations</p>
+                        </div>
+                    </div>
 
                     <h2>Download Full Report</h2>
                     <p>You can download the full project report here: <a href="../assets/pdf/yoda.pdf" target="_blank">Comparative Analysis and Optimization of MD5 and MD6 Hashing Algorithm Implementations in C++, OpenCL, and Verilog</a>.</p>
