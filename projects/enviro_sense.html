@@ -17,9 +17,12 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
             <a class="navbar-brand js-scroll-trigger" href="../index.html#page-top">
                 <span class="d-block d-lg-none">David Samuel Young</span>
-                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="../assets/img/profile.jpg" alt="IMG MISSING" /></span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2"
+                                                     src="../assets/img/profile.jpg" alt="IMG MISSING" /></span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#about">About</a></li>
@@ -39,7 +42,10 @@
             <main>
                 <section class="project-details">
                     <h2>Overview</h2>
-                    <p>The Enviro-Sense project focuses on designing and implementing a wireless sensor network (WSN) to monitor environmental conditions at raptor nesting sites in the wild. The system aims to gather accurate data on temperature and humidity, aiding in the conservation and study of these birds.</p>
+                    <p>The Enviro-Sense project focuses on designing and implementing a wireless sensor network
+                        (WSN) to monitor environmental conditions at raptor nesting sites in the wild. The system
+                        aims to gather accurate data on temperature and humidity, aiding in the conservation and
+                        study of these birds.</p>
 
                     <h2>Objectives</h2>
                     <ul>
@@ -58,20 +64,36 @@
                     </ul>
 
                     <h2>Details</h2>
-                    <p>The project utilized the ESP32-PICO-D4 microcontroller for its compact size and built-in Wi-Fi capabilities, allowing for seamless data transmission. The DHT11 sensor was chosen for its affordability and sufficient accuracy for temperature and humidity measurements. The DS3231 RTC ensured accurate timestamping of data. Firmware was developed in Arduino IDE to manage data acquisition, validation, and low-power modes, optimizing battery life. The prototype was designed to collect data every second and transmit it wirelessly to a rendezvous node, where it could be further processed and analyzed.</p>
+                    <p>The project used the ESP32-PICO-D4 microcontroller for its compact size and built-in Wi-Fi
+                        capabilities, allowing for seamless data transmission. The DHT11 sensor was chosen for its
+                        affordability and sufficient accuracy for temperature and humidity measurements. The DS3231 RTC
+                        ensured accurate timestamping of data. Firmware was developed in Arduino IDE to manage data
+                        acquisition, validation, and low-power modes, optimizing battery life. The prototype was
+                        designed to collect data every second and transmit it via a wireless connection to a
+                        rendezvous node, where it could be further processed and analyzed.</p>
                     <div class="picture-placeholder">
                         <img src="../assets/img/CommSystem.png" alt="Communication Design">
                         <p>Figure 1: Prototype Communication and User Interface Design</p>
                     </div>
 
                     <h2>Challenges</h2>
-                    <p>One of the main challenges was selecting components that balanced cost with performance. The ESP32-PICO-D4 and DHT11 sensor met the project's budget constraints while still providing reliable data. Another challenge was ensuring data accuracy and integrity, which was addressed through data validation techniques like range checking. Power management was critical, achieved through the microcontroller's low-power sleep mode and the RTC's wake-up triggers.</p>
+                    <p>One of the main challenges was selecting components that balanced cost with performance.
+                        The ESP32-PICO-D4 and DHT11 sensor met the project's budget constraints while still providing
+                        reliable data. Another challenge was ensuring data accuracy and integrity, which was addressed
+                        through data validation techniques like range checking. Power management was critical,
+                        achieved through the microcontroller's low-power sleep mode and the RTC's wake-up triggers.</p>
 
                     <h2>Results</h2>
-                    <p>The prototype successfully gathered and transmitted accurate temperature and humidity data from sensor nodes to a rendezvous node. The system proved to be cost-effective, with a stable wireless connection and efficient power management, capable of real-time monitoring and data collection. Testing confirmed the system's ability to meet the specified requirements, providing a solid foundation for future development and deployment.</p>
+                    <p>The prototype successfully gathered and transmitted accurate temperature and humidity data from
+                        sensor nodes to a rendezvous node. The system proved to be cost-effective, with a stable
+                        wireless connection and efficient power management, capable of real-time monitoring and
+                        data collection. Testing confirmed the system's ability to meet the specified requirements,
+                        providing a solid foundation for future development and deployment.</p>
 
-                    <h2>Download Full Report</h2>
-                    <p>You can download the full project report here: <a href="../assets/pdf/enviro-sense.pdf" target="_blank">Enviro-Sense: Environmental Monitoring System for Raptor Nesting Sites</a>.</p>
+                    <h2>View the Full Report</h2>
+                    <p>You can view the full project report here: <a href="../assets/pdf/enviro-sense.pdf"
+                                                                     target="_blank">Enviro-Sense:
+                        Environmental Monitoring System for Raptor Nesting Sites</a>.</p>
                 </section>
             </main>
         </div>

@@ -17,9 +17,12 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
             <a class="navbar-brand js-scroll-trigger" href="../index.html#page-top">
                 <span class="d-block d-lg-none">David Samuel Young</span>
-                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="../assets/img/profile.jpg" alt="IMG MISSING" /></span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2"
+                                                     src="../assets/img/profile.jpg" alt="IMG MISSING" /></span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#about">About</a></li>
@@ -40,13 +43,18 @@
                 <section class="project-details">
                     <h2>Overview</h2>
                     <p>
-                        This project focuses on implementing data compression and encryption on the STM32F051 Discovery Board for secure and efficient data transmission from sensors in Antarctic buoys. The primary goal is to reduce transmission costs and ensure data security over the Iridium satellite network.
+                        This project focuses on implementing data compression and encryption on the STM32F051 Discovery
+                        Board for secure and efficient data transmission from sensors in Antarctic buoys. The primary
+                        goal is to reduce transmission costs and ensure data security over the Iridium satellite
+                        network.
                     </p>
 
                     <h2>Objectives</h2>
                     <ul>
-                        <li>Design and implement efficient data compression and encryption algorithms on the STM32F051 Discovery Board.</li>
-                        <li>Ensure data integrity and security during transmission over the Iridium satellite network.</li>
+                        <li>Design and implement efficient data compression and encryption algorithms on the
+                            STM32F051 Discovery Board.</li>
+                        <li>Ensure data integrity and security during transmission over the Iridium satellite
+                            network.</li>
                         <li>Validate system performance using simulated and real sensor data.</li>
                     </ul>
 
@@ -60,7 +68,12 @@
 
                     <h2>Details</h2>
                     <p>
-                        The project involves designing subsystems for data retrieval, compression, encryption, and transmission. The data collected from the IMU (Inertial Measurement Unit) is first processed to extract Fourier coefficients. The LZSS algorithm is used for data compression, and the Blowfish algorithm is employed for encryption. The system ensures that at least 25% of the lower Fourier coefficients are preserved, meeting the client's requirements. A CRC-32 checksum is used to verify data integrity before and after transmission.
+                        The project involves designing subsystems for data retrieval, compression, encryption, and
+                        transmission. The data collected from the IMU (Inertial Measurement Unit) is first processed
+                        to extract Fourier coefficients. The LZSS algorithm is used for data compression, and the
+                        Blowfish algorithm is employed for encryption. The system ensures that at least 25% of the
+                        lower Fourier coefficients are preserved, meeting the client's requirements. A CRC-32 checksum
+                        is used to verify data integrity before and after transmission.
                     </p>
 
                     <div class="picture-placeholder">
@@ -70,12 +83,20 @@
 
                     <h2>Challenges</h2>
                     <p>
-                        One major challenge was the limited memory and computational power of the STM32F051 Discovery Board, which restricted the choice of algorithms. Implementing the algorithms in C, rather than Python, presented difficulties due to differences in processor architecture. Another challenge was ensuring that the compression and encryption processes were efficient enough to meet the specified time constraints.
+                        One major challenge was the limited memory and computational power of the STM32F051 Discovery
+                        Board, which restricted the choice of algorithms. Implementing the algorithms in C, rather
+                        than Python, presented difficulties due to differences in processor architecture. Another
+                        challenge was ensuring that the compression and encryption processes were efficient enough
+                        to meet the specified time constraints.
                     </p>
 
                     <h2>Results</h2>
                     <p>
-                        The project successfully implemented data compression and encryption on the STM32F051 Discovery Board, meeting most of the specified acceptance test procedures. The system achieved an average compression ratio of 1.812 and encryption speed of 910.219 bytes/second. However, the compression and encryption times slightly exceeded the initial specified limits, leading to revised specifications.
+                        The project successfully implemented data compression and encryption on the STM32F051
+                        Discovery Board, meeting most of the specified acceptance test procedures.
+                        The system achieved an average compression ratio of 1.812 and encryption speed of 910.219
+                        bytes/second. However, the compression and encryption times slightly exceeded the initially
+                        specified limits, leading to revised specifications.
                     </p>
 
                     <div class="row">
@@ -89,8 +110,10 @@
                         </div>
                     </div>
 
-                    <h2>Download Full Report</h2>
-                    <p>You can download the full project report here: <a href="../assets/pdf/arm_sharc_comms.pdf" target="_blank">Encryption and Compression Algorithms on Resource-Constrained Embedded ARM Microcontrollers</a>.</p>
+                    <h2>View the Full Report</h2>
+                    <p>You can view the full project report here: <a href="../assets/pdf/arm_sharc_comms.pdf"
+                                                                         target="_blank">Encryption and Compression
+                        Algorithms on Resource-Constrained Embedded ARM Microcontrollers</a>.</p>
                 </section>
             </main>
         </div>
