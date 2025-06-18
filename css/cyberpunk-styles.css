@@ -27,8 +27,15 @@ body {
 	font-size: 1.1rem;
 	overflow: hidden; /* Prevent scrolling on main body */
 	box-sizing: border-box; /* Good practice */
-	padding-left: 100px;
+	/* Padding is now applied only on large screens via media query */
 }
+
+@media (min-width: 992px) {
+	body {
+		padding-left: 100px;
+	}
+}
+
 
 .hidden {
 	display: none !important;
@@ -69,6 +76,7 @@ body {
 	justify-content: center;
 	z-index: 100;
 	transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+	padding: 1rem; /* Add padding for small screens */
 }
 
 #breach-container.success {
@@ -138,8 +146,9 @@ body {
 	display: grid;
 	grid-template-rows: auto 1fr auto;
 	height: 100vh;
-	width: 100vw;
+	width: 100%; /* Changed from 100vw to avoid horizontal scrollbar issues */
 }
+
 
 .cyber-header {
 	display: flex;
@@ -651,24 +660,61 @@ CYBERPUNK 2077 DYNAMIC LAYOUT ADDITIONS
 }
 
 
-/* --- ADJUST MAIN INTERFACE FOR SIDEBAR --- */
-#cyber-interface {
-	/*padding-left: 100px; */ /* Width of the sidebar */
-}
-
 /* Make interface responsive */
-@media (max-width: 991.98px) {
-	#cyber-sidebar {
-		display: none; /* Hide sidebar on smaller screens */
-	}
-
+@media (max-width: 992px) {
 	body {
-		padding-left: 0; /* <-- Reset body padding */
+		padding-left: 0; /* <-- Reset body padding on small screens */
 	}
 
-	.cyber-header, .cyber-main {
+	/* === RESPONSIVE HEADER === */
+	.cyber-header {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.25rem;
+		padding: 0.5rem 1rem;
+	}
+
+	.cyber-main {
 		padding-left: 1rem;
 		padding-right: 1rem;
+	}
+
+	/* === RESPONSIVE FOOTER === */
+	.cyber-footer.command-hub {
+		flex-wrap: nowrap; /* Prevent wrapping */
+		overflow-x: auto; /* Enable horizontal scrolling */
+		justify-content: flex-start; /* Align buttons to the start */
+		padding: 0.5rem; /* Make footer more compact */
+	}
+
+	.cyber-footer.command-hub .nav-button {
+		flex-shrink: 0; /* Prevent buttons from shrinking */
+	}
+
+	/* Hide scrollbar for a cleaner look but keep it functional */
+	.cyber-footer.command-hub::-webkit-scrollbar {
+		display: none;
+	}
+
+	.cyber-footer.command-hub {
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+	}
+
+	/* === PREVIOUS FIXES FOR BREACH SCREEN === */
+	.breach-content h1 {
+		font-size: 2.5rem;
+	}
+
+	#breach-grid {
+		grid-template-columns: repeat(5, 1fr);
+		gap: 5px;
+	}
+
+	.breach-cell {
+		width: auto;
+		height: 50px; /* Keep height fixed for consistency */
+		font-size: 1.1rem;
 	}
 }
 
@@ -787,4 +833,49 @@ DIAGRAM VISIBILITY FIX
 	padding: 0;
 	border: none;
 	clip-path: none;
+}
+
+/*
+================================================================================
+ANTI-FOUC & INITIAL VISIBILITY CONTROL (REVISED)
+================================================================================
+*/
+
+/* --- Default state: Show Breach Protocol, Hide Main Interface --- */
+
+/* Hide the main interface and sidebar by default */
+#cyber-interface,
+#cyber-sidebar {
+	display: none;
+}
+
+/* Show the breach container by default */
+#breach-container {
+	display: flex;
+}
+
+/* --- Bypassed state: Hide Breach Protocol, Show Main Interface --- */
+/* This is triggered when the `breach-bypassed` class is added to <html> */
+
+html.breach-bypassed #cyber-interface {
+	display: grid;
+}
+
+/* The sidebar is now only displayed on large screens when the breach is bypassed. */
+@media (min-width: 992px) {
+	html.breach-bypassed #cyber-sidebar {
+		display: flex;
+	}
+}
+
+/* Hide the breach container when bypassed */
+html.breach-bypassed #breach-container {
+	display: none;
+}
+
+/* --- Fade-out animation for a smooth transition --- */
+#breach-container.success {
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
 }

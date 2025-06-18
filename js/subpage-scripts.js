@@ -1,26 +1,29 @@
-window.addEventListener('DOMContentLoaded', () => {
-
-	// --- SYSTEM CLOCK ---
+const initializeSubpage = () => {
+	// --- GRAB ALL NECESSARY DOM ELEMENTS ---
 	const timeElement = document.getElementById('system-time');
+	const logScroller = document.querySelector('#log-scroller ul');
 
+	// --- HELPER FUNCTIONS ---
+
+	/**
+	 * Updates the system clock in the header.
+	 */
 	function updateTime() {
 		const now = new Date();
 		const hours = String(now.getHours()).padStart(2, '0');
 		const minutes = String(now.getMinutes()).padStart(2, '0');
 		const seconds = String(now.getSeconds()).padStart(2, '0');
-		timeElement.textContent = `${hours}:${minutes}:${seconds}`;
+		if (timeElement) timeElement.textContent = `${hours}:${minutes}:${seconds}`;
 	}
 
-	setInterval(updateTime, 1000);
-	updateTime();
-
-
-	// --- SIDEBAR LOG SCROLLER ---
-	const logScroller = document.querySelector('#log-scroller ul');
-	if (logScroller) {
-		// Find which page we are on by checking the title
+	/**
+	 * Populates the scrolling log in the sidebar.
+	 */
+	function populateLog() {
+		if (!logScroller) return;
 		const pageTitle = document.title;
 		let logEntries;
+
 
 		if (pageTitle.includes("YODA Project")) {
 			logEntries = [
@@ -109,8 +112,6 @@ window.addEventListener('DOMContentLoaded', () => {
 			];
 		}
 
-
-		// Duplicate entries to ensure continuous scroll
 		const fullLog = [...logEntries, ...logEntries, ...logEntries];
 		fullLog.forEach(entry => {
 			const li = document.createElement('li');
@@ -118,4 +119,16 @@ window.addEventListener('DOMContentLoaded', () => {
 			logScroller.appendChild(li);
 		});
 	}
-});
+
+	// --- INITIALIZATION LOGIC ---
+	updateTime();
+	setInterval(updateTime, 1000);
+	populateLog();
+};
+
+// This robust check ensures the script runs only when the DOM is fully ready.
+if (document.readyState === 'loading') {
+	document.addEventListener('DOMContentLoaded', initializeSubpage);
+} else {
+	initializeSubpage();
+}

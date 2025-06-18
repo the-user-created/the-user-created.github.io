@@ -21,6 +21,14 @@
 	<link href="css/styles.css" rel="stylesheet"/>
 	<!-- Cyberpunk theme CSS -->
 	<link href="css/cyberpunk-styles.css" rel="stylesheet"/>
+
+	<script>
+        // This runs instantly before the page is rendered.
+        // If the breach has been completed in this session, it ensures the breach container is never shown.
+        if (sessionStorage.getItem('breachCompleted') === 'true') {
+            document.documentElement.classList.add('breach-bypassed');
+        }
+    </script>
 </head>
 <body id="page-top">
 
@@ -40,8 +48,8 @@
 	</div>
 </div>
 
-<!-- NEW: System Status Sidebar -->
-<aside id="cyber-sidebar" class="hidden">
+<!-- System Status Sidebar -->
+<aside id="cyber-sidebar">
 	<div class="sidebar-logo glitch" data-text="DSY">DSY</div>
 	<div class="system-status">
 		<div class="status-bar-group">
@@ -71,7 +79,7 @@
 </aside>
 
 <!-- Main Cyberpunk Interface (Initially Hidden) -->
-<div id="cyber-interface" class="hidden">
+<div id="cyber-interface">
 	<header class="cyber-header">
 		<div class="header-item">USER: D.S. YOUNG</div>
 		<div class="header-item" id="system-time">--:--:--</div>
