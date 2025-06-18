@@ -145,7 +145,7 @@ body {
 #cyber-interface {
 	display: grid;
 	grid-template-rows: auto 1fr auto;
-	height: 100vh;
+	height: 100dvh;
 	width: 100%; /* Changed from 100vw to avoid horizontal scrollbar issues */
 }
 
@@ -195,7 +195,7 @@ body {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	padding: 1rem;
+	padding: 1rem 1rem calc(1rem + env(safe-area-inset-bottom));
 	background: rgba(14, 14, 23, 0.5);
 	border-top: 1px solid var(--cp-yellow);
 }
@@ -514,7 +514,7 @@ CYBERPUNK 2077 DYNAMIC LAYOUT ADDITIONS
 	left: 0;
 	top: 0;
 	width: 100px;
-	height: 100vh;
+	height: 100dvh;
 	background: rgba(14, 14, 23, 0.5);
 	border-right: 1px solid var(--cp-yellow);
 	box-shadow: 5px 0 15px rgba(240, 181, 55, 0.1);
@@ -661,7 +661,7 @@ CYBERPUNK 2077 DYNAMIC LAYOUT ADDITIONS
 
 
 /* Make interface responsive */
-@media (max-width: 991.98px) {
+@media (max-width: 992px) {
 	body {
 		padding-left: 0; /* <-- Reset body padding on small screens */
 	}
@@ -681,11 +681,11 @@ CYBERPUNK 2077 DYNAMIC LAYOUT ADDITIONS
 
 	/* === RESPONSIVE FOOTER WITH SCROLL HINT === */
 	.cyber-footer.command-hub {
-		position: relative; /* Needed for the ::after pseudo-element */
-		flex-wrap: nowrap; /* Prevent wrapping */
-		overflow-x: auto; /* Enable horizontal scrolling */
-		justify-content: flex-start; /* Align buttons to the start */
-		padding: 0.5rem; /* Make footer more compact */
+		position: relative;
+		flex-wrap: nowrap;
+		overflow-x: auto;
+		justify-content: flex-start;
+		padding: 0.5rem 0.5rem calc(0.5rem + env(safe-area-inset-bottom));
 	}
 
 	/* === Add a fade-out effect to hint at scrollability === */
