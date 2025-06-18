@@ -661,7 +661,7 @@ CYBERPUNK 2077 DYNAMIC LAYOUT ADDITIONS
 
 
 /* Make interface responsive */
-@media (max-width: 992px) {
+@media (max-width: 991.98px) {
 	body {
 		padding-left: 0; /* <-- Reset body padding on small screens */
 	}
@@ -679,12 +679,25 @@ CYBERPUNK 2077 DYNAMIC LAYOUT ADDITIONS
 		padding-right: 1rem;
 	}
 
-	/* === RESPONSIVE FOOTER === */
+	/* === RESPONSIVE FOOTER WITH SCROLL HINT === */
 	.cyber-footer.command-hub {
+		position: relative; /* Needed for the ::after pseudo-element */
 		flex-wrap: nowrap; /* Prevent wrapping */
 		overflow-x: auto; /* Enable horizontal scrolling */
 		justify-content: flex-start; /* Align buttons to the start */
 		padding: 0.5rem; /* Make footer more compact */
+	}
+
+	/* === Add a fade-out effect to hint at scrollability === */
+	.cyber-footer.command-hub::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 60px; /* Width of the fade effect */
+		height: 100%;
+		background: linear-gradient(to right, transparent, var(--cp-darkest-blue));
+		pointer-events: none; /* Ensures the fade doesn't block interaction */
 	}
 
 	.cyber-footer.command-hub .nav-button {
