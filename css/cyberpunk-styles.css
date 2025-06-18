@@ -697,25 +697,15 @@ CYBERPUNK 2077 DYNAMIC LAYOUT ADDITIONS
 		padding-bottom: 100px;
 	}
 
-	/* === RESPONSIVE FOOTER WITH SCROLL HINT === */
+	/* === RESPONSIVE FOOTER WITH DYNAMIC SCROLL MASK === */
 	.cyber-footer.command-hub {
 		position: relative;
 		flex-wrap: nowrap;
 		overflow-x: auto;
 		justify-content: flex-start;
 		padding: 0.5rem 0.5rem calc(0.5rem + env(safe-area-inset-bottom));
-	}
-
-	/* === Add a fade-out effect to hint at scrollability === */
-	.cyber-footer.command-hub::after {
-		content: '';
-		position: absolute;
-		top: 0;
-		right: 0;
-		width: 60px; /* Width of the fade effect */
-		height: 100%;
-		background: linear-gradient(to right, transparent, var(--cp-darkest-blue));
-		pointer-events: none; /* Ensures the fade doesn't block interaction */
+		-webkit-mask: linear-gradient(to right, transparent, black 20px, black calc(100% - 20px), transparent);
+		mask: linear-gradient(to right, transparent, black 20px, black calc(100% - 20px), transparent);
 	}
 
 	.cyber-footer.command-hub .nav-button {
@@ -1032,25 +1022,25 @@ SIDEBAR LEGAL LINK STYLES
 ================================================================================
 */
 .sidebar-footer {
-    width: 100%;
-    text-align: center;
-    padding-top: 1rem;
-    margin-top: auto;
-    border-top: 1px dashed var(--cp-red);
+	width: 100%;
+	text-align: center;
+	padding-top: 1rem;
+	margin-top: auto;
+	border-top: 1px dashed var(--cp-red);
 }
 
 .sidebar-legal-link {
-    font-family: var(--font-secondary);
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    color: var(--cp-grey);
-    opacity: 0.7;
-    text-decoration: none;
-    transition: all 0.2s ease;
+	font-family: var(--font-secondary);
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	color: var(--cp-grey);
+	opacity: 0.7;
+	text-decoration: none;
+	transition: all 0.2s ease;
 }
 
 .sidebar-legal-link:hover {
-    color: var(--cp-yellow);
-    text-shadow: 0 0 5px var(--cp-yellow);
-    opacity: 1;
+	color: var(--cp-yellow);
+	text-shadow: 0 0 5px var(--cp-yellow);
+	opacity: 1;
 }
