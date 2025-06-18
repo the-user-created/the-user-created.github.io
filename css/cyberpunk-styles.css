@@ -27,7 +27,7 @@ body {
 	font-size: 1.1rem;
 	overflow: hidden; /* Prevent scrolling on main body */
 	box-sizing: border-box; /* Good practice */
-    padding-left: 100px;
+	padding-left: 100px;
 }
 
 .hidden {
@@ -659,15 +659,17 @@ CYBERPUNK 2077 DYNAMIC LAYOUT ADDITIONS
 /* Make interface responsive */
 @media (max-width: 991.98px) {
 	#cyber-sidebar {
-        display: none; /* Hide sidebar on smaller screens */
-    }
-    body {
-        padding-left: 0; /* <-- Reset body padding */
-    }
-    .cyber-header, .cyber-main {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
+		display: none; /* Hide sidebar on smaller screens */
+	}
+
+	body {
+		padding-left: 0; /* <-- Reset body padding */
+	}
+
+	.cyber-header, .cyber-main {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
 }
 
 /*
@@ -760,4 +762,29 @@ SUBPAGE / PROJECT DETAIL STYLES
 	max-width: 400px;
 	text-align: center;
 	text-decoration: none; /* remove underline from link */
+}
+
+/*
+================================================================================
+DIAGRAM VISIBILITY FIX
+================================================================================
+*/
+
+.image-inverted-colors {
+	background: var(--cp-darkest-blue); /* Fallback for the figure element */
+}
+
+.image-inverted-colors img {
+	background-color: var(--cp-white); /* Crucial: Gives transparent parts of the image a white base before inversion */
+	filter: invert(1) hue-rotate(180deg); /* Inverts colors and shifts the hue for a cybernetic look */
+	padding: 15px; /* Adds some spacing around the diagram content */
+	border: 1px solid var(--cp-red); /* A thematic border to frame it */
+}
+
+/* This overrides the default figure styling for this specific use case */
+.project-detail-pane .graphs .image-inverted-colors {
+	background: transparent;
+	padding: 0;
+	border: none;
+	clip-path: none;
 }

@@ -1,77 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Project Details</title>
-        <link rel="icon" type="image/png" href="../assets/img/favicon.ico">
-        <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css">
-        <link href="../css/styles.css" rel="stylesheet">
-        <!-- Bootstrap core CSS-->
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
-    </head>
-    <body>
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-            <a class="navbar-brand js-scroll-trigger" href="../index.html#page-top">
-                <span class="d-block d-lg-none">David Samuel Young</span>
-                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="../assets/img/profile.jpg" alt="IMG MISSING" /></span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#interests">Interests</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#awards">Awards</a></li>
-                </ul>
-            </div>
-        </nav>
-        <div class="container mt-5">
-            <header class="mb-5">
-                <h2>Project Title</h2>
-            </header>
-            <main>
-                <section class="project-details">
-                    <h2>Overview</h2>
-                    <p>Brief overview of the project.</p>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DATA SHARD: [Project Name]</title>
+	<link rel="icon" type="image/png" href="../assets/img/favicon.ico">
+	<!-- Font Awesome icons (free version)-->
+	<script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+	<!-- Devicon icons-->
+	<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+	<!-- Cyberpunk Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;700&display=swap"
+		  rel="stylesheet">
+	<!-- Core theme CSS (includes Bootstrap)-->
+	<link href="../css/styles.css" rel="stylesheet">
+	<!-- Cyberpunk theme CSS -->
+	<link href="../css/cyberpunk-styles.css" rel="stylesheet">
+</head>
+<body id="page-top">
 
-                    <h2>Objectives</h2>
-                    <ul>
-                        <li>Objective 1</li>
-                        <li>Objective 2</li>
-                        <li>Objective 3</li>
-                    </ul>
+<!-- Cyberpunk Background -->
+<div class="cyber-glitch-background"></div>
 
-                    <h2>Technologies Used</h2>
-                    <ul>
-                        <li>Technology 1</li>
-                        <li>Technology 2</li>
-                        <li>Technology 3</li>
-                    </ul>
+<!-- System Status Sidebar -->
+<aside id="cyber-sidebar">
+	<div class="sidebar-logo glitch" data-text="DSY">DSY</div>
+	<div class="system-status">
+		<div class="status-bar-group">
+			<div class="status-label">CPU</div>
+			<div class="status-bar">
+				<div class="status-fill cpu-fill"></div>
+			</div>
+		</div>
+		<div class="status-bar-group">
+			<div class="status-label">MEM</div>
+			<div class="status-bar">
+				<div class="status-fill mem-fill"></div>
+			</div>
+		</div>
+		<div class="status-bar-group">
+			<div class="status-label">NET</div>
+			<div class="status-bar">
+				<div class="status-fill net-fill"></div>
+			</div>
+		</div>
+	</div>
+	<div id="log-scroller">
+		<ul></ul>
+	</div>
+</aside>
 
-                    <h2>Details</h2>
-                    <p>Detailed description of the project, including methodologies, tools, and outcomes.</p>
+<!-- Main Cyberpunk Interface -->
+<div id="cyber-interface">
+	<header class="cyber-header">
+		<div class="header-item">USER: D.S. YOUNG</div>
+		<div class="header-item" id="system-time">--:--:--</div>
+		<div class="header-item">STATUS: <span class="text-primary">DATA_SHARD_ACCESS</span></div>
+	</header>
 
-                    <h2>Challenges</h2>
-                    <p>Explanation of challenges faced and how they were overcome.</p>
+	<main id="main-content-pane" class="cyber-main project-detail-pane">
+		<div class="content-wrapper">
+			<!-- === START OF PROJECT CONTENT === -->
+			<!-- Replace the content below with your project details -->
 
-                    <h2>Results</h2>
-                    <p>Summary of results, including any data or metrics.</p>
-                </section>
-            </main>
-        </div>
+			<h2 class="mb-5">[Project Title]</h2>
+			<div class="subheading mb-3"><a href="" target="_blank">View Project Source <i
+					class="fas fa-external-link-alt"></i></a></div>
 
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- FontAwesome JS -->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Core theme JS-->
-        <script src="../js/scripts.js"></script>
-    </body>
+			<h3 class="mt-5">Overview</h3>
+			<p>[Brief overview of the project. What is it? What does it do? Why is it cool?]</p>
+
+			<h3>Objectives</h3>
+			<ul>
+				<li>[Objective 1: What was the primary goal?]</li>
+				<li>[Objective 2: What was the secondary goal?]</li>
+				<li>[Objective 3: Any other key targets?]</li>
+			</ul>
+
+			<h3>Technologies Used</h3>
+			<ul class="list-inline dev-icons">
+				<li class="list-inline-item"><i class="devicon-python-plain"></i>[Technology 1]</li>
+				<li class="list-inline-item"><i class="devicon-docker-plain"></i>[Technology 2]</li>
+				<li class="list-inline-item"><i class="fas fa-microchip"></i>[Technology 3]</li>
+			</ul>
+			<p>Other tools: [List any other relevant tools or libraries here.]</p>
+
+			<h3>Details</h3>
+			<p>[Detailed description of the project, including methodologies, architecture, and key features. Explain
+				how you built it and the interesting parts of the process.]</p>
+
+			<!-- Optional: Add an image or diagram -->
+			<div class="graphs">
+				<figure>
+					<img src="../assets/img/[your-project-image.png]" alt="[Project Image Alt Text]" class="img-fluid">
+					<figcaption>Figure 1: [A descriptive caption for your image.]</figcaption>
+				</figure>
+			</div>
+
+			<h3>Challenges</h3>
+			<p>[Describe a key challenge you faced during the project and explain the steps you took to overcome it.
+				This shows your problem-solving skills.]</p>
+
+			<h3>Results</h3>
+			<p>[Summarize the final outcome of the project. Was it successful? What did you learn? Include any key
+				metrics or achievements.]</p>
+
+			<!-- Optional: Add a link to a full report -->
+			<div class="report-link-container">
+				<a href="" target="_blank" class="report-link">
+					<i class="fas fa-file-pdf"></i> View Full Technical Report
+				</a>
+			</div>
+
+			<!-- === END OF PROJECT CONTENT === -->
+		</div>
+	</main>
+
+	<footer class="cyber-footer command-hub">
+		<a href="../index.html" class="nav-button active">
+			<span>// RETURN</span> To Mainframe
+		</a>
+	</footer>
+</div>
+
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Interactive JS for subpages -->
+<script src="../js/subpage-scripts.js"></script>
+
+</body>
 </html>

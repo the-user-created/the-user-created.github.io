@@ -1,108 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Enviro-Sense</title>
-        <link rel="icon" type="image/png" href="../assets/img/favicon.ico">
-        <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css">
-        <link href="../css/styles.css" rel="stylesheet">
-        <!-- Bootstrap core CSS-->
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
-    </head>
-    <body>
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-            <a class="navbar-brand js-scroll-trigger" href="../index.html#page-top">
-                <span class="d-block d-lg-none">David Samuel Young</span>
-                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2"
-                                                     src="../assets/img/profile.jpg" alt="IMG MISSING" /></span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#interests">Interests</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#awards">Awards</a></li>
-                </ul>
-            </div>
-        </nav>
-        <div class="container mt-5">
-            <header class="mb-5">
-                <h2>Enviro-Sense: Environmental Monitoring System for Raptor Nesting Sites</h2>
-            </header>
-            <main>
-                <section class="project-details">
-                    <h2>Overview</h2>
-                    <p>The Enviro-Sense project focuses on designing and implementing a wireless sensor network
-                        (WSN) to monitor environmental conditions at raptor nesting sites in the wild. The system
-                        aims to gather accurate data on temperature and humidity, aiding in the conservation and
-                        study of these birds.</p>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DATA SHARD: Enviro-Sense</title>
+	<link rel="icon" type="image/png" href="../assets/img/favicon.ico">
+	<!-- Font Awesome icons (free version)-->
+	<script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+	<!-- Devicon icons-->
+	<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+	<!-- Cyberpunk Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;700&display=swap"
+		  rel="stylesheet">
+	<!-- Core theme CSS (includes Bootstrap)-->
+	<link href="../css/styles.css" rel="stylesheet">
+	<!-- Cyberpunk theme CSS -->
+	<link href="../css/cyberpunk-styles.css" rel="stylesheet">
+</head>
+<body id="page-top">
 
-                    <h2>Objectives</h2>
-                    <ul>
-                        <li>Develop a cost-effective and reliable environmental monitoring system.</li>
-                        <li>Ensure seamless wireless data transmission from remote sensor nodes.</li>
-                        <li>Implement power-efficient strategies to maximize battery life.</li>
-                    </ul>
+<!-- Cyberpunk Background -->
+<div class="cyber-glitch-background"></div>
 
-                    <h2>Technologies Used</h2>
-                    <ul>
-                        <li>ESP32-PICO-D4 Microcontroller</li>
-                        <li>DHT11 Temperature and Humidity Sensor</li>
-                        <li>DS3231 Real-Time Clock (RTC) Module</li>
-                        <li>Raspberry Pi Zero</li>
-                        <li>Arduino IDE</li>
-                    </ul>
+<!-- System Status Sidebar -->
+<aside id="cyber-sidebar">
+	<div class="sidebar-logo glitch" data-text="DSY">DSY</div>
+	<div class="system-status">
+		<div class="status-bar-group">
+			<div class="status-label">CPU</div>
+			<div class="status-bar">
+				<div class="status-fill cpu-fill"></div>
+			</div>
+		</div>
+		<div class="status-bar-group">
+			<div class="status-label">MEM</div>
+			<div class="status-bar">
+				<div class="status-fill mem-fill"></div>
+			</div>
+		</div>
+		<div class="status-bar-group">
+			<div class="status-label">NET</div>
+			<div class="status-bar">
+				<div class="status-fill net-fill"></div>
+			</div>
+		</div>
+	</div>
+	<div id="log-scroller">
+		<ul></ul>
+	</div>
+</aside>
 
-                    <h2>Details</h2>
-                    <p>The project used the ESP32-PICO-D4 microcontroller for its compact size and built-in Wi-Fi
-                        capabilities, allowing for seamless data transmission. The DHT11 sensor was chosen for its
-                        affordability and sufficient accuracy for temperature and humidity measurements. The DS3231 RTC
-                        ensured accurate timestamping of data. Firmware was developed in Arduino IDE to manage data
-                        acquisition, validation, and low-power modes, optimizing battery life. The prototype was
-                        designed to collect data every second and transmit it via a wireless connection to a
-                        rendezvous node, where it could be further processed and analyzed.</p>
-                    <div class="picture-placeholder">
-                        <img src="../assets/img/CommSystem.png" alt="Communication Design">
-                        <p>Figure 1: Prototype Communication and User Interface Design</p>
-                    </div>
+<!-- Main Cyberpunk Interface -->
+<div id="cyber-interface">
+	<header class="cyber-header">
+		<div class="header-item">USER: D.S. YOUNG</div>
+		<div class="header-item" id="system-time">--:--:--</div>
+		<div class="header-item">STATUS: <span class="text-primary">DATA_SHARD_ACCESS</span></div>
+	</header>
 
-                    <h2>Challenges</h2>
-                    <p>One of the main challenges was selecting components that balanced cost with performance.
-                        The ESP32-PICO-D4 and DHT11 sensor met the project's budget constraints while still providing
-                        reliable data. Another challenge was ensuring data accuracy and integrity, which was addressed
-                        through data validation techniques like range checking. Power management was critical,
-                        achieved through the microcontroller's low-power sleep mode and the RTC's wake-up triggers.</p>
+	<main id="main-content-pane" class="cyber-main project-detail-pane">
+		<div class="content-wrapper">
+			<h2 class="mb-5">Enviro-Sense: Environmental Monitoring for Raptor Nesting Sites</h2>
 
-                    <h2>Results</h2>
-                    <p>The prototype successfully gathered and transmitted accurate temperature and humidity data from
-                        sensor nodes to a rendezvous node. The system proved to be cost-effective, with a stable
-                        wireless connection and efficient power management, capable of real-time monitoring and
-                        data collection. Testing confirmed the system's ability to meet the specified requirements,
-                        providing a solid foundation for future development and deployment.</p>
+			<h3 class="mt-5">Overview</h3>
+			<p>The Enviro-Sense project focuses on designing and implementing a wireless sensor network (WSN) to monitor
+				environmental conditions at raptor nesting sites in the wild. The system aims to gather accurate data on
+				temperature and humidity, aiding in the conservation and study of these birds.</p>
 
-                    <h2>View the Full Report</h2>
-                    <p>You can view the full project report here: <a href="../assets/pdf/enviro-sense.pdf"
-                                                                     target="_blank">Enviro-Sense:
-                        Environmental Monitoring System for Raptor Nesting Sites</a>.</p>
-                </section>
-            </main>
-        </div>
+			<h3>Objectives</h3>
+			<ul>
+				<li>Develop a cost-effective and reliable environmental monitoring system.</li>
+				<li>Ensure seamless wireless data transmission from remote sensor nodes.</li>
+				<li>Implement power-efficient strategies to maximize battery life for long-term deployment.</li>
+			</ul>
 
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- FontAwesome JS -->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Core theme JS-->
-        <script src="../js/scripts.js"></script>
-    </body>
+			<h3>Technologies Used</h3>
+			<ul class="list-inline dev-icons">
+				<li class="list-inline-item"><i class="devicon-raspberrypi-line"></i>Raspberry Pi</li>
+				<li class="list-inline-item"><i class="devicon-arduino-plain"></i>Arduino IDE</li>
+				<li class="list-inline-item"><i class="devicon-cplusplus-plain"></i>C++</li>
+			</ul>
+			<p>Hardware: ESP32-PICO-D4, DHT11 Sensor, DS3231 Real-Time Clock.</p>
+
+			<h3>Details</h3>
+			<p>The project used the ESP32-PICO-D4 microcontroller for its compact size and built-in Wi-Fi capabilities,
+				allowing for seamless data transmission. The DHT11 sensor was chosen for its affordability and
+				sufficient accuracy for temperature and humidity measurements. The DS3231 RTC ensured accurate
+				timestamping of data. Firmware was developed in Arduino IDE to manage data acquisition, validation, and
+				low-power modes, optimizing battery life. The prototype was designed to collect data every second and
+				transmit it via a wireless connection to a rendezvous node, where it could be further processed and
+				analyzed.</p>
+
+			<div class="graphs">
+				<figure>
+					<img src="../assets/img/CommSystem.png" alt="Communication Design" class="img-fluid">
+					<figcaption>Figure 1: Prototype Communication and User Interface Design</figcaption>
+				</figure>
+			</div>
+
+			<h3>Challenges</h3>
+			<p>One of the main challenges was selecting components that balanced cost with performance. The
+				ESP32-PICO-D4 and DHT11 sensor met the project's budget constraints while still providing reliable data.
+				Another challenge was ensuring data accuracy and integrity, which was addressed through data validation
+				techniques like range checking. Power management was critical, achieved through the microcontroller's
+				low-power sleep mode and the RTC's wake-up triggers.</p>
+
+			<h3>Results</h3>
+			<p>The prototype successfully gathered and transmitted accurate temperature and humidity data from sensor
+				nodes to a rendezvous node. The system proved to be cost-effective, with a stable wireless connection
+				and efficient power management, capable of real-time monitoring and data collection. Testing confirmed
+				the system's ability to meet the specified requirements, providing a solid foundation for future
+				development and deployment.</p>
+
+			<div class="report-link-container">
+				<a href="../assets/pdf/enviro-sense.pdf" target="_blank" class="report-link">
+					<i class="fas fa-file-pdf"></i> View Full Technical Report
+				</a>
+			</div>
+		</div>
+	</main>
+
+	<footer class="cyber-footer command-hub">
+		<a href="../index.html" class="nav-button active">
+			<span>// RETURN</span> To Mainframe
+		</a>
+	</footer>
+</div>
+
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Interactive JS for subpages -->
+<script src="../js/subpage-scripts.js"></script>
+
+</body>
 </html>

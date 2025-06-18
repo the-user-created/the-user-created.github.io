@@ -1,118 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>TOPSIS-based RAT Selection for HWNs</title>
-        <link rel="icon" type="image/png" href="../assets/img/favicon.ico">
-        <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css">
-        <link href="../css/styles.css" rel="stylesheet">
-        <!-- Bootstrap core CSS-->
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
-    </head>
-    <body>
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-            <a class="navbar-brand js-scroll-trigger" href="../index.html#page-top">
-                <span class="d-block d-lg-none">David Samuel Young</span>
-                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2"
-                                                     src="../assets/img/profile.jpg" alt="IMG MISSING" /></span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#interests">Interests</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#awards">Awards</a></li>
-                </ul>
-            </div>
-        </nav>
-        <div class="container mt-5">
-            <header class="mb-5">
-                <h2>TOPSIS-based RAT Selection Algorithm for Heterogeneous Wireless Networks</h2>
-            </header>
-            <main>
-                <section class="project-details">
-                    <h2>Overview</h2>
-                    <p>This project focuses on developing a TOPSIS-based algorithm for selecting the optimal Radio
-                        Access Technology (RAT) in Heterogeneous Wireless Networks (HWNs). The algorithm considers
-                        multiple criteria such as signal strength, data rate, and delay to ensure the best possible
-                        network performance and user experience.</p>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DATA SHARD: TOPSIS RAT Selection</title>
+	<link rel="icon" type="image/png" href="../assets/img/favicon.ico">
+	<!-- Font Awesome icons (free version)-->
+	<script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+	<!-- Devicon icons-->
+	<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+	<!-- Cyberpunk Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;700&display=swap"
+		  rel="stylesheet">
+	<!-- Core theme CSS (includes Bootstrap)-->
+	<link href="../css/styles.css" rel="stylesheet">
+	<!-- Cyberpunk theme CSS -->
+	<link href="../css/cyberpunk-styles.css" rel="stylesheet">
+</head>
+<body id="page-top">
 
-                    <h2>Objectives</h2>
-                    <ul>
-                        <li>Analyze the complexities of RAT selection in HWNs.</li>
-                        <li>Develop a multi-criteria decision-making algorithm using TOPSIS.</li>
-                        <li>Evaluate the impact of different criteria weights on RAT selection decisions.</li>
-                    </ul>
+<!-- Cyberpunk Background -->
+<div class="cyber-glitch-background"></div>
 
-                    <h2>Technologies Used</h2>
-                    <ul>
-                        <li>TOPSIS Algorithm</li>
-                        <li>Python for Data Analysis</li>
-                        <li>Network Simulation Tools</li>
-                    </ul>
+<!-- System Status Sidebar -->
+<aside id="cyber-sidebar">
+	<div class="sidebar-logo glitch" data-text="DSY">DSY</div>
+	<div class="system-status">
+		<div class="status-bar-group">
+			<div class="status-label">CPU</div>
+			<div class="status-bar">
+				<div class="status-fill cpu-fill"></div>
+			</div>
+		</div>
+		<div class="status-bar-group">
+			<div class="status-label">MEM</div>
+			<div class="status-bar">
+				<div class="status-fill mem-fill"></div>
+			</div>
+		</div>
+		<div class="status-bar-group">
+			<div class="status-label">NET</div>
+			<div class="status-bar">
+				<div class="status-fill net-fill"></div>
+			</div>
+		</div>
+	</div>
+	<div id="log-scroller">
+		<ul></ul>
+	</div>
+</aside>
 
-                    <h2>Details</h2>
-                    <p>The project begins with a literature review comparing horizontal and vertical handovers in
-                        HWNs and examining multi-criteria decision-making techniques for RAT selection. The system
-                        description includes details on available RATs (LTE, Wi-Fi 6, 5G NR) and the criteria (signal
-                        strength, data rate, delay) used for selection. The TOPSIS algorithm was applied to normalize
-                        the decision matrix, calculate weighted scores, and determine the ideal and negative ideal
-                        solutions. The evaluation involved extensive testing with varying weights for each criterion
-                        to understand their impact on RAT selection.</p>
+<!-- Main Cyberpunk Interface -->
+<div id="cyber-interface">
+	<header class="cyber-header">
+		<div class="header-item">USER: D.S. YOUNG</div>
+		<div class="header-item" id="system-time">--:--:--</div>
+		<div class="header-item">STATUS: <span class="text-primary">DATA_SHARD_ACCESS</span></div>
+	</header>
 
-                    <h2>Challenges</h2>
-                    <p>The primary challenge was ensuring the algorithm's accuracy and efficiency in real-time
-                        scenarios. Balancing the criteria to reflect realistic user preferences and network
-                        conditions required meticulous testing and refinement. Additionally, data limitations from
-                        network simulations posed challenges in validating the algorithm's performance across
-                        different environments.</p>
+	<main id="main-content-pane" class="cyber-main project-detail-pane">
+		<div class="content-wrapper">
+			<h2 class="mb-5">TOPSIS-based RAT Selection Algorithm for Heterogeneous Wireless Networks</h2>
 
-                    <h2>Results</h2>
-                    <p>The TOPSIS-based algorithm demonstrated its ability to effectively select the optimal RAT in
-                        HWNs. The results showed a strong preference for Wi-Fi 6 due to its balanced performance
-                        across all criteria. 5G NR was preferred in scenarios with higher data rate requirements.
-                        No users selected LTE, indicating its lower competitiveness under the tested conditions.
-                        The project highlights the significance of user-defined weights in shaping RAT selection
-                        decisions and validates the use of TOPSIS for multi-criteria network optimization.</p>
+			<h3 class="mt-5">Overview</h3>
+			<p>This project focuses on developing a TOPSIS-based algorithm for selecting the optimal Radio Access
+				Technology (RAT) in Heterogeneous Wireless Networks (HWNs). The algorithm considers multiple criteria
+				such as signal strength, data rate, and delay to ensure the best possible network performance and user
+				experience.</p>
 
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img src="../assets/img/rat_selections_criterion_1.png" alt="Signal Strength Criterion Weights" class="img-fluid">
-                            <p>Figure 2a: Distribution of RAT Selections for Users with Varying Signal Strength Criterion Weights</p>
-                        </div>
-                        <div class="col-md-6">
-                            <img src="../assets/img/rat_selections_criterion_2.png" alt="Data Rate Criterion Weights" class="img-fluid">
-                            <p>Figure 2b: Distribution of RAT Selections for Users with Varying Data Rate Criterion Weights</p>
-                        </div>
-                        <div class="col-md-6">
-                            <img src="../assets/img/rat_selections_criterion_3.png" alt="Delay Criterion Weights" class="img-fluid">
-                            <p>Figure 2c: Distribution of RAT Selections for Users with Varying Delay Criterion Weights</p>
-                        </div>
-                    </div>
+			<h3>Objectives</h3>
+			<ul>
+				<li>Analyze the complexities of RAT selection in HWNs.</li>
+				<li>Develop a multi-criteria decision-making algorithm using TOPSIS.</li>
+				<li>Evaluate the impact of different criteria weights on RAT selection decisions.</li>
+			</ul>
 
-                    <h2>View the Full Report</h2>
-                    <p>You can view the full project report here: <a href="../assets/pdf/topsis-hwn.pdf"
-                                                                         target="_blank">TOPSIS-based RAT Selection
-                        Algorithm for Heterogeneous Wireless Networks</a>.</p>
-                </section>
-            </main>
-        </div>
+			<h3>Technologies Used</h3>
+			<ul class="list-inline dev-icons">
+				<li class="list-inline-item"><i class="devicon-python-plain"></i>Python</li>
+				<li class="list-inline-item"><i class="fas fa-network-wired"></i>Network Simulation</li>
+				<li class="list-inline-item"><i class="fas fa-calculator"></i>TOPSIS Algorithm</li>
+			</ul>
 
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- FontAwesome JS -->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Core theme JS-->
-        <script src="../js/scripts.js"></script>
-    </body>
+			<h3>Details</h3>
+			<p>The project begins with a literature review comparing horizontal and vertical handovers in HWNs and
+				examining multi-criteria decision-making techniques for RAT selection. The system description includes
+				details on available RATs (LTE, Wi-Fi 6, 5G NR) and the criteria (signal strength, data rate, delay)
+				used for selection. The TOPSIS algorithm was applied to normalize the decision matrix, calculate
+				weighted scores, and determine the ideal and negative ideal solutions. The evaluation involved extensive
+				testing with varying weights for each criterion to understand their impact on RAT selection.</p>
+
+			<h3>Challenges</h3>
+			<p>The primary challenge was ensuring the algorithm's accuracy and efficiency in real-time scenarios.
+				Balancing the criteria to reflect realistic user preferences and network conditions required meticulous
+				testing and refinement. Additionally, data limitations from network simulations posed challenges in
+				validating the algorithm's performance across different environments.</p>
+
+			<h3>Results</h3>
+			<p>The TOPSIS-based algorithm demonstrated its ability to effectively select the optimal RAT in HWNs. The
+				results showed a strong preference for Wi-Fi 6 due to its balanced performance across all criteria. 5G
+				NR was preferred in scenarios with higher data rate requirements. No users selected LTE, indicating its
+				lower competitiveness under the tested conditions. The project highlights the significance of
+				user-defined weights in shaping RAT selection decisions and validates the use of TOPSIS for
+				multi-criteria network optimization.</p>
+
+			<div class="graphs">
+				<figure>
+					<img src="../assets/img/rat_selections_criterion_1.png" alt="Signal Strength Criterion Weights"
+						 class="img-fluid">
+					<figcaption>Fig 2a: RAT Selections (Signal Strength)</figcaption>
+				</figure>
+				<figure>
+					<img src="../assets/img/rat_selections_criterion_2.png" alt="Data Rate Criterion Weights"
+						 class="img-fluid">
+					<figcaption>Fig 2b: RAT Selections (Data Rate)</figcaption>
+				</figure>
+				<figure>
+					<img src="../assets/img/rat_selections_criterion_3.png" alt="Delay Criterion Weights"
+						 class="img-fluid">
+					<figcaption>Fig 2c: RAT Selections (Delay)</figcaption>
+				</figure>
+			</div>
+
+			<div class="report-link-container">
+				<a href="../assets/pdf/topsis-hwn.pdf" target="_blank" class="report-link">
+					<i class="fas fa-file-pdf"></i> View Full Technical Report
+				</a>
+			</div>
+		</div>
+	</main>
+
+	<footer class="cyber-footer command-hub">
+		<a href="../index.html" class="nav-button active">
+			<span>// RETURN</span> To Mainframe
+		</a>
+	</footer>
+</div>
+
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Interactive JS for subpages -->
+<script src="../js/subpage-scripts.js"></script>
+
+</body>
 </html>
