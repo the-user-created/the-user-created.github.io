@@ -50,6 +50,10 @@
 	<div id="log-scroller">
 		<ul></ul>
 	</div>
+
+	<div class="sidebar-footer d-none d-lg-block">
+        <a id="legal-disclaimer-btn-desktop" class="sidebar-legal-link" href="#">Legal</a>
+    </div>
 </aside>
 
 <!-- Main Cyberpunk Interface -->
@@ -122,7 +126,28 @@
 		<a href="../index.html" class="nav-button active">
 			<span>// RETURN</span> To Mainframe
 		</a>
+
+		<button id="legal-disclaimer-btn-mobile" class="nav-button legal-btn d-lg-none">
+            <span>// SYS</span> Legal
+        </button>
 	</footer>
+</div>
+
+<div id="legal-modal" class="cyber-modal hidden">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h3 class="glitch" data-text="SYSTEM LEGAL NOTICE">SYSTEM LEGAL NOTICE</h3>
+			<button id="modal-close-btn" class="modal-close">×</button>
+		</div>
+		<div class="modal-body">
+			<p>This is a non-commercial fan project. It is a personal portfolio and a tribute to the aesthetics of
+				Cyberpunk 2077®.</p>
+			<p>Cyberpunk 2077® is a trademark of CD PROJEKT S.A. All rights to the original content, names, and
+				trademarks belong to their respective owners. This project is not affiliated with, associated,
+				authorized, or endorsed by CD PROJEKT S.A.</p>
+			<p><a href="https://www.cyberpunk.net/" target="_blank">Visit the official Cyberpunk 2077 website.</a></p>
+		</div>
+	</div>
 </div>
 
 <!-- Bootstrap core JS-->

@@ -120,10 +120,39 @@ const initializeSubpage = () => {
 		});
 	}
 
+	function setupModal() {
+		const desktopBtn = document.getElementById('legal-disclaimer-btn-desktop');
+		const mobileBtn = document.getElementById('legal-disclaimer-btn-mobile');
+		const modal = document.getElementById('legal-modal');
+		const closeBtn = document.getElementById('modal-close-btn');
+
+		function openModal() {
+			if (modal) modal.classList.remove('hidden');
+		}
+
+		function closeModal() {
+			if (modal) modal.classList.add('hidden');
+		}
+
+		if (modal && closeBtn) {
+			if (desktopBtn) desktopBtn.addEventListener('click', openModal);
+			if (mobileBtn) mobileBtn.addEventListener('click', openModal);
+
+			closeBtn.addEventListener('click', closeModal);
+
+			modal.addEventListener('click', (e) => {
+				if (e.target === modal) {
+					closeModal();
+				}
+			});
+		}
+	}
+
 	// --- INITIALIZATION LOGIC ---
 	updateTime();
 	setInterval(updateTime, 1000);
 	populateLog();
+	setupModal();
 };
 
 // This robust check ensures the script runs only when the DOM is fully ready.

@@ -171,7 +171,8 @@ body {
 
 .cyber-main {
 	overflow-y: auto;
-	padding: 2rem 2rem 120px;
+	/* Increased bottom padding from 120px to 200px to prevent the multi-row footer from overlapping content on medium-large screens. */
+	padding: 2rem 2rem 200px;
 }
 
 .content-wrapper {
@@ -241,6 +242,15 @@ body {
 
 .nav-button.active span {
 	color: var(--cp-red);
+}
+
+/* On large screens (>=992px), the sidebar is 100px wide. This media query
+   adjusts the footer to start after the sidebar, preventing the overlap. */
+@media (min-width: 992px) {
+	.cyber-footer.command-hub {
+		width: calc(100% - 100px);
+		left: 100px;
+	}
 }
 
 
@@ -899,4 +909,148 @@ html.breach-bypassed #breach-container {
 	opacity: 0;
 	visibility: hidden;
 	transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+
+/*
+================================================================================
+LEGAL DISCLAIMER MODAL STYLES
+================================================================================
+*/
+
+/* --- Legal Button in Footer --- */
+.legal-btn {
+	flex-grow: 0 !important; /* Don't let it stretch like the return button */
+	color: var(--cp-grey) !important;
+	opacity: 0.6;
+}
+
+.legal-btn:hover {
+	opacity: 1;
+}
+
+.legal-btn span {
+	color: var(--cp-red);
+}
+
+/* --- Modal Overlay & Content --- */
+.cyber-modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(14, 14, 23, 0.85); /* Dark, semi-transparent background */
+	backdrop-filter: blur(5px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1000;
+	opacity: 1;
+	transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.cyber-modal.hidden {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.modal-content {
+	background: var(--cp-darkest-blue);
+	border: 1px solid var(--cp-yellow);
+	box-shadow: 0 0 25px rgba(240, 181, 55, 0.2);
+	width: 90%;
+	max-width: 600px;
+	padding: 1.5rem;
+	clip-path: polygon(0 10%, 10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%);
+	animation: modal-fade-in 0.3s ease-out;
+}
+
+@keyframes modal-fade-in {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.modal-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid var(--cp-red);
+	padding-bottom: 1rem;
+	margin-bottom: 1rem;
+}
+
+.modal-header h3 {
+	margin: 0;
+	color: var(--cp-cyan);
+	font-size: 1.5rem;
+}
+
+.modal-close {
+	background: none;
+	border: none;
+	color: var(--cp-grey);
+	font-size: 2rem;
+	line-height: 1;
+	cursor: pointer;
+	padding: 0 0.5rem;
+	transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+	color: var(--cp-red);
+	text-shadow: 0 0 5px var(--cp-red);
+}
+
+.modal-body {
+	font-size: 0.9rem;
+	line-height: 1.6;
+	color: var(--cp-grey);
+}
+
+.modal-body p {
+	margin-bottom: 1rem;
+}
+
+.modal-body a {
+	color: var(--cp-cyan);
+	text-decoration: underline;
+}
+
+.modal-body a:hover {
+	color: var(--cp-white);
+}
+
+/*
+================================================================================
+SIDEBAR LEGAL LINK STYLES
+================================================================================
+*/
+.sidebar-footer {
+    width: 100%;
+    text-align: center;
+    padding-top: 1rem;
+    margin-top: auto;
+    border-top: 1px dashed var(--cp-red);
+}
+
+.sidebar-legal-link {
+    font-family: var(--font-secondary);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: var(--cp-grey);
+    opacity: 0.7;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.sidebar-legal-link:hover {
+    color: var(--cp-yellow);
+    text-shadow: 0 0 5px var(--cp-yellow);
+    opacity: 1;
 }

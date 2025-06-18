@@ -16,6 +16,7 @@ const initializeInteractivePortfolio = () => {
 	setInterval(updateTime, 1000);
 	populateLog();
 	setupCommandHub();
+	setupModal();
 
 	// Check the session state and decide what to display
 	if (sessionStorage.getItem('breachCompleted') === 'true') {
@@ -129,6 +130,34 @@ const initializeInteractivePortfolio = () => {
 					loadContent(targetId);
 					commandHub.querySelectorAll('.nav-button').forEach(btn => btn.classList.remove('active'));
 					navButton.classList.add('active');
+				}
+			});
+		}
+	}
+
+	function setupModal() {
+		const desktopBtn = document.getElementById('legal-disclaimer-btn-desktop');
+		const mobileBtn = document.getElementById('legal-disclaimer-btn-mobile');
+		const modal = document.getElementById('legal-modal');
+		const closeBtn = document.getElementById('modal-close-btn');
+
+		function openModal() {
+			if (modal) modal.classList.remove('hidden');
+		}
+
+		function closeModal() {
+			if (modal) modal.classList.add('hidden');
+		}
+
+		if (modal && closeBtn) {
+			if (desktopBtn) desktopBtn.addEventListener('click', openModal);
+			if (mobileBtn) mobileBtn.addEventListener('click', openModal);
+
+			closeBtn.addEventListener('click', closeModal);
+
+			modal.addEventListener('click', (e) => {
+				if (e.target === modal) {
+					closeModal();
 				}
 			});
 		}
