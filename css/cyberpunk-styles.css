@@ -54,14 +54,14 @@ body {
 	/*animation: background-pan 30s linear infinite;*/
 }
 
-@keyframes background-pan {
+/*@keyframes background-pan {
 	from {
 		background-position: 0 0;
 	}
 	to {
 		background-position: 50px 50px;
 	}
-}
+}*/
 
 /* --- BREACH PROTOCOL INTRO --- */
 #breach-container {
