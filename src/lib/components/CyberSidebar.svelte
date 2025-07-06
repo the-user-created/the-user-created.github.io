@@ -1,5 +1,5 @@
 <script>
-	import { createEventDispatcher } from 'svelte';
+	import {createEventDispatcher} from 'svelte';
 
 	const dispatch = createEventDispatcher();
 
@@ -57,10 +57,32 @@
 </aside>
 
 <style>
-	.sidebar-legal-link {
+	:global(.sidebar-footer) {
+		width: 100%;
+		text-align: center;
+		padding-top: 1rem;
+		margin-top: auto;
+		border-top: 1px dashed var(--cp-red);
+	}
+
+	:global(.sidebar-legal-link) {
 		background: none;
 		border: none;
 		padding: 0;
 		cursor: pointer;
+
+		font-family: var(--font-secondary);
+		font-size: 0.8rem;
+		text-transform: uppercase;
+		color: var(--cp-grey);
+		opacity: 0.7;
+		text-decoration: none;
+		transition: all 0.2s ease;
+	}
+
+	:global(.sidebar-legal-link:hover) {
+		color: var(--cp-yellow);
+		text-shadow: 0 0 5px var(--cp-yellow);
+		opacity: 1;
 	}
 </style>

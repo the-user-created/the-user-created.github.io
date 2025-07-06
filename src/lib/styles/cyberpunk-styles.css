@@ -1005,32 +1005,3 @@ LEGAL DISCLAIMER MODAL STYLES
 .modal-body a:hover {
 	color: var(--cp-white);
 }
-
-/*
-================================================================================
-SIDEBAR LEGAL LINK STYLES
-================================================================================
-*/
-.sidebar-footer {
-	width: 100%;
-	text-align: center;
-	padding-top: 1rem;
-	margin-top: auto;
-	border-top: 1px dashed var(--cp-red);
-}
-
-.sidebar-legal-link {
-	font-family: var(--font-secondary);
-	font-size: 0.8rem;
-	text-transform: uppercase;
-	color: var(--cp-grey);
-	opacity: 0.7;
-	text-decoration: none;
-	transition: all 0.2s ease;
-}
-
-.sidebar-legal-link:hover {
-	color: var(--cp-yellow);
-	text-shadow: 0 0 5px var(--cp-yellow);
-	opacity: 1;
-}
