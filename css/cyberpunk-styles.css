@@ -51,17 +51,7 @@ body {
 	repeating-linear-gradient(90deg, transparent, transparent 1px, rgba(255, 255, 255, 0.05) 1px, rgba(255, 255, 255, 0.05) 2px);
 	background-size: 50px 50px;
 	z-index: -1;
-	/*animation: background-pan 30s linear infinite;*/
 }
-
-/*@keyframes background-pan {
-	from {
-		background-position: 0 0;
-	}
-	to {
-		background-position: 50px 50px;
-	}
-}*/
 
 /* --- BREACH PROTOCOL INTRO --- */
 #breach-container {
