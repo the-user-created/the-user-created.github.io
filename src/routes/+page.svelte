@@ -22,6 +22,7 @@
 	// Import global styles
 	import '$lib/styles/styles.css';
 	import '$lib/styles/cyberpunk-styles.css';
+	import '$lib/styles/fonts.css';
 
 	// --- State Management ---
 	let breachCompleted = false;
@@ -87,17 +88,8 @@
 	<meta name="description" content="David Young's ePortfolio" />
 	<meta name="author" content="David Young" />
 
-	<!-- Font Awesome icons (free version)-->
-	<script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 	<!-- Devicon icons-->
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-	<!-- Cyberpunk Fonts -->
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link
-		href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;700&display=swap"
-		rel="stylesheet"
-	/>
 </svelte:head>
 
 {#if !breachCompleted}

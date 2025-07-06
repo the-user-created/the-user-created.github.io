@@ -231,7 +231,7 @@ body {
 }
 
 .nav-button.active span {
-	color: var(--cp-red);
+	color: var(--cp-darkest-blue);
 }
 
 /* On large screens (>=992px), the sidebar is 100px wide. This media query

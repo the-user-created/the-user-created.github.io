@@ -2,6 +2,7 @@
     import { onMount } from 'svelte';
     import { browser } from '$app/environment';
 
+	// TODO: Recreate accordion without Bootstrap
     onMount(() => {
         if (browser) {
             import('bootstrap/dist/js/bootstrap.bundle.min.js');

@@ -1,0 +1,53 @@
+/* rajdhani-regular - latin */
+@font-face {
+	font-display: swap;
+	font-family: 'Rajdhani';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/fonts/rajdhani-v16-latin-regular.woff2') format('woff2');
+}
+
+/* rajdhani-500 - latin */
+@font-face {
+	font-display: swap;
+	font-family: 'Rajdhani';
+	font-style: normal;
+	font-weight: 500;
+	src: url('/fonts/rajdhani-v16-latin-500.woff2') format('woff2');
+}
+
+/* rajdhani-700 - latin */
+@font-face {
+	font-display: swap;
+	font-family: 'Rajdhani';
+	font-style: normal;
+	font-weight: 700;
+	src: url('/fonts/rajdhani-v16-latin-700.woff2') format('woff2');
+}
+
+/* orbitron-regular - latin */
+@font-face {
+	font-display: swap;
+	font-family: 'Orbitron';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/fonts/orbitron-v34-latin-regular.woff2') format('woff2');
+}
+
+/* orbitron-700 - latin */
+@font-face {
+	font-display: swap;
+	font-family: 'Orbitron';
+	font-style: normal;
+	font-weight: 700;
+	src: url('/fonts/orbitron-v34-latin-700.woff2') format('woff2');
+}
+
+/* orbitron-900 - latin */
+@font-face {
+	font-display: swap;
+	font-family: 'Orbitron';
+	font-style: normal;
+	font-weight: 900;
+	src: url('/fonts/orbitron-v34-latin-900.woff2') format('woff2');
+}

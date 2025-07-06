@@ -23,7 +23,8 @@
 		<div class="subheading mb-3">// My Cyberdeck & Utility Belt</div>
 		<ul class="list-inline dev-icons">
 			<li class="list-inline-item">
-				<i class="devicon-docker-plain"></i><b>Docker</b>—I put daemons in containers. Sometimes, they even work.
+				<i class="devicon-docker-plain"></i><b>Docker</b>—I put daemons in containers. Sometimes, they even
+				work.
 			</li>
 			<li class="list-inline-item">
 				<i class="devicon-jetbrains-plain"></i><b>JetBrains IDEs</b>—My external co-processor. Does the heavy
@@ -37,8 +38,8 @@
 				<i class="devicon-ubuntu-plain"></i><b>Ubuntu</b>—I use Linux, which grants +10 tech cred automatically.
 			</li>
 			<li class="list-inline-item">
-				<i class="devicon-googlecloud-plain"></i><b>GCP/Firebase</b>—Leveraging the corps' cloud infrastructure for
-				my own ops.
+				<i class="devicon-googlecloud-plain"></i><b>Firebase</b>—Leveraging the corps' cloud infrastructure
+				for my own ops.
 			</li>
 		</ul>
 	</div>
