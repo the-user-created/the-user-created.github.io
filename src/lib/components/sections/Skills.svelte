@@ -1,3 +1,7 @@
+<script>
+    import { DevIcon } from '$lib/components/icons';
+</script>
+
 <div class="content-wrapper">
 	<h2 class="mb-5">Loadout // Chrome & Implants</h2>
 	<div class="skills-group">
@@ -5,16 +9,16 @@
 		<div class="subheading mb-3">// Protocols I speak to the ghost in the machine...</div>
 		<ul class="list-inline dev-icons">
 			<li class="list-inline-item">
-				<i class="devicon-python-plain"></i><b>Python</b>—My go-to language when a job needs to be clean.
+				<DevIcon icon="flutter" /><b>Flutter/Dart</b>—For when the suits want a mobile presence.
 			</li>
 			<li class="list-inline-item">
-				<i class="devicon-cplusplus-plain"></i><b>C++</b>—For when you need raw speed and don't mind the pain.
+				<DevIcon icon="python" /><b>Python</b>—My go-to language when a job needs to be clean.
 			</li>
 			<li class="list-inline-item">
-				<i class="devicon-flutter-plain"></i><b>Flutter/Dart</b>—For when the suits want a mobile presence.
+				<DevIcon icon="cplusplus" /><b>C++</b>—For when you need raw speed and don't mind the pain.
 			</li>
 			<li class="list-inline-item">
-				<i class="devicon-c-plain"></i><b>C</b>—I can write "Hello, World!" to stdout and that counts!
+				<DevIcon icon="c" /><b>C</b>—I can write "Hello, World!" to stdout and that counts!
 			</li>
 		</ul>
 	</div>
@@ -23,23 +27,19 @@
 		<div class="subheading mb-3">// My Cyberdeck & Utility Belt</div>
 		<ul class="list-inline dev-icons">
 			<li class="list-inline-item">
-				<i class="devicon-docker-plain"></i><b>Docker</b>—I put daemons in containers. Sometimes, they even
-				work.
+				<DevIcon icon="docker" /><b>Docker</b>—I put daemons in containers. Sometimes, they even work.
 			</li>
 			<li class="list-inline-item">
-				<i class="devicon-jetbrains-plain"></i><b>JetBrains IDEs</b>—My external co-processor. Does the heavy
-				thinking so I don't have to.
+				<DevIcon icon="jetbrains" /><b>JetBrains IDEs</b>—My external co-processor. Does the heavy thinking so I don't have to.
 			</li>
 			<li class="list-inline-item">
-				<i class="devicon-github-original"></i><b>GitHub</b>—Commit messages range from “fixed bug” to “please
-				work.”
+				<DevIcon icon="github" size="2.5rem" class="bi-github" /><b>GitHub</b>—Commit messages range from “fixed bug” to “please work.”
 			</li>
 			<li class="list-inline-item">
-				<i class="devicon-ubuntu-plain"></i><b>Ubuntu</b>—I use Linux, which grants +10 tech cred automatically.
+				<DevIcon icon="ubuntu" /><b>Ubuntu</b>—I use Linux, which grants +10 tech cred automatically.
 			</li>
 			<li class="list-inline-item">
-				<i class="devicon-googlecloud-plain"></i><b>Firebase</b>—Leveraging the corps' cloud infrastructure
-				for my own ops.
+				<DevIcon icon="firebase" /><b>Firebase</b>—Leveraging the corps' cloud infrastructure for my own ops.
 			</li>
 		</ul>
 	</div>

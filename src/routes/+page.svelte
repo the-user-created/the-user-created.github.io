@@ -87,9 +87,6 @@
 	<title>David Young // Netrunner</title>
 	<meta name="description" content="David Young's ePortfolio" />
 	<meta name="author" content="David Young" />
-
-	<!-- Devicon icons-->
-	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 </svelte:head>
 
 {#if !breachCompleted}

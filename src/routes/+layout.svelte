@@ -1,0 +1,33 @@
+<svelte:head>
+	<!-- Preload the WOFF2 font files for faster rendering -->
+	<link
+			rel="preload"
+			href="/fonts/rajdhani-v16-latin-regular.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin
+	/>
+	<link
+			rel="preload"
+			href="/fonts/orbitron-v34-latin-regular.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin
+	/>
+	<link
+			rel="preload"
+			href="/fonts/rajdhani-v16-latin-700.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin
+	/>
+	<link
+			rel="preload"
+			href="/fonts/orbitron-v34-latin-700.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin
+	/>
+</svelte:head>
+
+<slot/>
