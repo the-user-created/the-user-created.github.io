@@ -20,7 +20,7 @@
 				The job was to shunt encrypted video data from cameras to the cloud, ensuring it was locked down tighter than
 				a corpo vault. My work at Arixian was a preem score, giving me valuable XP in building secure, scalable systems
 				and a look into the real-world combat zone of digital security.
-				<a href="https://arixian.io" target="_blank">Learn more about Arixian on their dataterm.</a>
+				<a href="https://arixian.ai" target="_blank">Learn more about Arixian on their dataterm.</a>
 			</p>
 			<p><b>Tech Loadout:</b> Python, Docker, GitLab, CI/CD, Secure Protocols</p>
 		</div>
